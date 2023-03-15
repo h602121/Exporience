@@ -1,0 +1,145 @@
+
+a{
+    display: inline-block;
+}
+.login_field{
+    padding: 0.5em;
+    width: 21.1em;
+    border: 2px solid #747474;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 1em;
+}
+
+.divider_buttons{
+    /*width:5em;*/
+    /*height:auto;*/
+    /*min-height: 1px;*/
+    display:inline-block;
+}
+
+
+.buttons{
+    text-align: center;
+    margin-top: 2em;
+}
+.action_buttons{
+    margin: 5em;
+    position: relative;
+    display: inline;
+    text-align: center;
+}
+.createuserbutton{
+    width: 2em;
+}
+.loginbutton{
+    width: 2em;
+}
+
+#column_container{
+    width: 10em;
+    margin: auto;
+}
+
+#login-label{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.login_text{
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.spectator-button {
+    margin: 0;
+    width: auto;
+    position: relative;
+    top: 30em;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.button {
+
+
+    appearance: none;
+    background-color: #000000;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
+    line-height: normal;
+    margin: 1em;
+    min-height: 3.75em;
+    min-width: 10em;
+    outline: none;
+
+    padding: 1em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.button:disabled {
+    pointer-events: none;
+}
+
+.button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+#form-login{
+
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: 12em;
+}
+/*#form-login{*/
+/*    position: absolute;*/
+/*    transform: translate(-50%,-50%);*/
+/*    left:50%;*/
+/*    top: 50%;*/
+/*    margin-top: 5em;*/
+/*}*/
+
+/*#form-login>div{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+
+/*    */
+/*}*/
+/*#form-login>div>*{*/
+/*    display: flex;*/
+
+
+/*}*/
+
+/*.login-button{*/
+/*    margin: 0;*/
+/*    width: auto;*/
+/*    position: relative;*/
+/*    top: 5em;*/
+/*    text-align: center;*/
+/*    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
+/*}*/
+
+
+
