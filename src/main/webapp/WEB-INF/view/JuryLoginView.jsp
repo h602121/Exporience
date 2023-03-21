@@ -32,7 +32,7 @@
 
 </div>
 
-<div id="create-user" method="post" action="/createspectator">
+<div id="create-user">
 
     <div class="buttons">
 

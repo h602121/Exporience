@@ -1,3 +1,4 @@
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 
@@ -17,7 +18,10 @@
 
 <p>Spectator Login </p>
 
-<div id="form-login" method="post" action="/spectatorlogin">
+<c:if test="${error_message != null}">
+    <p style="color: red">${error_message}</p>
+</c:if>
+<form id="form-login" method="post" action="/spectatorlogin">
 
         <div id="column_container">
             <div id="login-label">
@@ -30,17 +34,18 @@
 
         </div>
 
-</div>
+</form>
 
-<div id="create-user" method="post" action="/createspectator">
+
+
 
     <div class="buttons">
 
         <div class="action_buttons">
 
-            <a href="/spectatormain">
-            <button class="button" type="submit" value="Login">Login</button>
-            </a>
+<%--            <a href="/spectatormain">--%>
+<%--            <button class="button" type="submit" value="Login">Login</button>--%>
+<%--            </a>--%>
 
 
             <div class="divider_buttons"></div>
@@ -50,10 +55,6 @@
         </div>
 
     </div>
-</div>
-
-
-</form>
 
 
 </body>

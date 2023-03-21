@@ -1,23 +1,35 @@
 package com.example.expo.Controller;
 
+
+import com.example.expo.Model.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/spectatorlogin")
+
 public class SpectatorLoginController {
-    @GetMapping
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/spectatorlogin")
     public String getSpectatorLogin(){
         return "SpectatorLoginView";
     }
 
-    @PostMapping
-    public String postLogin() {
+    @PostMapping("/spectatorlogin")
+    public String postLogin(@RequestParam String username, @RequestParam String password, RedirectAttributes ra) {
 
-        return "redirect:spectatorlogin";
+        if(!(userService.findSpectatorByEmailAndPassword(username,password))){
+            ra.addFlashAttribute("error_message", "Innlogging feilet");
+            return "redirect:/spectatorlogin";
+        }
+        return "redirect:spectatormain";
     }
 
-    //@RequestParam String phonenumber, @RequestParam String password, HttpServletRequest request, RedirectAttributes ra
+
 }
