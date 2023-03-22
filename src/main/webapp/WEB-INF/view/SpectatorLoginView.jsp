@@ -22,6 +22,26 @@
 </c:if>
 <form id="form-login" method="post" action="/spectatorlogin">
 
+    <div class="container">
+           <label class="login_text" for="username">Username:</label>
+                <input class="login_field" type="text" id="username" name="username">
+
+                <label class="login_text" for="password">Password:</label>
+                <input class="login_field" type="password" id="password" name="password">
+
+        <div class="box">
+            <button class="button" type="submit" value="Login">Login</button>
+        </div>
+
+        <div class="box">
+            <a href="/createspectator">
+                <button class="button" type="button" value="Create User">Create user</button>
+            </a>
+
+        </div>
+    </div>
+
+
 
 
 

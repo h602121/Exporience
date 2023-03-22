@@ -1,9 +1,6 @@
-/**
 a{
     display: inline-block;
 }
-**/
- */
 .login_field{
     padding: 0.5em;
     width: 21.1em;
@@ -34,27 +31,49 @@ a{
 }
 .createuserbutton{
     width: 2em;
-    
 }
 .loginbutton{
     width: 2em;
 }
 
 #column_container{
-    position: relative;
+    width: 10em;
+    margin: auto;
 }
-
 
 #login-label{
     margin-top: 2em;
     margin-bottom: 2em;
 }
-.login_text{
+.spectatorUsername_text{
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
+}
+.spectatorEmail_text{
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
+}
+.spectatorPassword_text{
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
+}
+.spectatorPasswordConfirm_text{
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1em;
     font-weight: 600;
 }
 
+.spectator-button {
+    margin: 0;
+    width: auto;
+    position: relative;
+    top: 30em;
+    text-align: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .spectator-button {
     margin: 0;
     width: auto;
@@ -109,52 +128,8 @@ a{
 }
 
 #form-login{
-    margin: auto;
-    width: 25%;
-    padding: 10px;
-}
-#test{
-    all: unset;
-    padding-left: 2em;
-}
-/*#form-login{*/
-/*    position: absolute;*/
-/*    transform: translate(-50%,-50%);*/
-/*    left:50%;*/
-/*    top: 50%;*/
-/*    margin-top: 5em;*/
-/*}*/
 
-/*#form-login>div{*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-
-/*    */
-/*}*/
-/*#form-login>div>*{*/
-/*    display: flex;*/
-
-
-/*}*/
-
-/*.login-button{*/
-/*    margin: 0;*/
-/*    width: auto;*/
-/*    position: relative;*/
-/*    top: 5em;*/
-/*    text-align: center;*/
-/*    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
-/*}*/
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-.box {
-    width: 50%;
-    height: 100px;
-
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: 12em;
 }
