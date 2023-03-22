@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="css/MainView.css">
     <link rel="stylesheet" href="css/Standard.css">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
 </head>
 
 <body>
