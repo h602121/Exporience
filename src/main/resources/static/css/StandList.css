@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+}
+.stand {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.stand h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+.stand p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+.stand .rating {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff9800;
+    margin: 10px 0;
+}

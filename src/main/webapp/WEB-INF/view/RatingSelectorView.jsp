@@ -20,7 +20,7 @@
         </div>
 
             <div class="stand-button">
-                <a href="/StandRating">
+                <a href="/standlist">
                     <button class="button" role="button">Stand</button>
                 </a>
             </div>

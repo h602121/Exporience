@@ -1,5 +1,8 @@
 package com.example.expo.Controller;
 
+import com.example.expo.util.LoginUtil;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class SpectatorMainController {
     @GetMapping
-    public String getSpectatorMain() {
+    public String getSpectatorMain(HttpSession session, HttpServletRequest req) {
+
+        if(!LoginUtil.erBrukerInnlogget(session)) return "redirect:spectatorlogin";
+
+      //  if(!LoginUtil.korrektRolle(session, (Integer) session.getAttribute("role"))) return "/";
 
         return "SpectatorMainView";
     }

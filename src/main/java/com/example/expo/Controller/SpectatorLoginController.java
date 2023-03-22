@@ -22,13 +22,23 @@ public class SpectatorLoginController {
     }
 
     @PostMapping("/spectatorlogin")
-    public String postLogin(@RequestParam String username, @RequestParam String password, RedirectAttributes ra) {
+    public String postLogin(@RequestParam String username, @RequestParam String password, HttpServletRequest req, RedirectAttributes ra, HttpSession session) {
 
-        if(!(userService.findSpectatorByEmailAndPassword(username,password))){
+
+        if(!userService.findSpectatorByEmail(username)) {
+            ra.addFlashAttribute("error_message", "User does not exist");
+            return "redirect:/spectatorlogin";
+
+        }
+        if(!(userService.validateLogin(username,password))){
             ra.addFlashAttribute("error_message", "Innlogging feilet");
             return "redirect:/spectatorlogin";
+        } else{
+            LoginUtil.loggInnBruker(req, 1);
+            req.getSession().setAttribute("username", username);
+            return "redirect:spectatormain";
+
         }
-        return "redirect:spectatormain";
     }
 
 

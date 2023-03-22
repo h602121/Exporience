@@ -7,9 +7,14 @@
 
   </persistence-unit>
   <persistence-unit name="persistenceUnit">
-    <class>com.example.expo.Model.Stand</class>
-    <class>com.example.expo.Model.User</class>
-    <properties>
+    <class>com.example.expo.Model.Entity.Stand</class>
+    <class>com.example.expo.Model.Entity.User</class>
+      <class>com.example.expo.Model.Entity.BachelorProject</class>
+      <class>com.example.expo.Model.Entity.ExhibitorStand</class>
+      <class>com.example.expo.Model.Entity.Expo</class>
+      <class>com.example.expo.Model.Entity.ExpoPointsHandler</class>
+      <class>com.example.expo.Model.Entity.Vote</class>
+      <properties>
       <property name="hibernate.connection.url"
                 value="jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/h602116"/>
       <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
