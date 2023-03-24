@@ -1,9 +1,6 @@
 package com.example.expo.Model.Entity;
 
-import jakarta.persistence.Basic;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Objects;
 

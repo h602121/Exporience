@@ -3,9 +3,7 @@ package com.example.expo.Controller;
 import com.example.expo.Model.Role;
 import com.example.expo.Model.Service.UserService;
 import com.example.expo.util.PassordUtil;
-
-import jakarta.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

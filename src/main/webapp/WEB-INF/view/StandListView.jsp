@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <!DOCTYPE html>
@@ -16,11 +16,14 @@
 </div>
 <h3>List of Stands</h3>
 
+${stands}
+
 <div>
 <%--    <form method="post">--%>
-        <c:forEach var="stand" items="stands">
+        <c:forEach var="stand" items="${stands}">
             <div>
-                <h2>#${stand.name}</h2>
+<%--              <c:out value="hei"></c:out>--%>
+                <p>${stand.name}
                 <p>${stand.stand_description}</p>
                 <p class="rating">3.5 stars</p>
             </div>

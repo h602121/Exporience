@@ -2,8 +2,8 @@ package com.example.expo.Controller;
 
 
 import com.example.expo.Model.Entity.Stand;
-import com.example.expo.Model.Service.StandService;
 import com.example.expo.Model.Service.ExpoPointsHandlerService;
+import com.example.expo.Model.Service.StandService;
 import com.example.expo.Model.Service.VoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

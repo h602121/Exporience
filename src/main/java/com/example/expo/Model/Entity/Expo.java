@@ -1,6 +1,6 @@
 package com.example.expo.Model.Entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.sql.Date;
 import java.sql.Time;
