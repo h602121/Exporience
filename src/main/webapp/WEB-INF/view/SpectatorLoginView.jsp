@@ -3,8 +3,9 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="css/SpectatorLoginView.css">
     <link rel="stylesheet" href="css/Standard.css">
+    <link rel="stylesheet" href="css/SpectatorLoginView.css">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
 </head>
@@ -20,18 +21,27 @@
 <c:if test="${error_message != null}">
     <p style="color: red">${error_message}</p>
 </c:if>
-<form id="form-login" method="post" action="/spectatorlogin">
 
-    <div class="container">
-           <label class="login_text" for="username">Username:</label>
-                <input class="login_field" type="text" id="username" name="username">
 
-                <label class="login_text" for="password">Password:</label>
-                <input class="login_field" type="password" id="password" name="password">
+<form class="login" method="post" action="/spectatorlogin">
+<div class="container">
+<div>
 
-        <div class="box">
-            <button class="button" type="submit" value="Login">Login</button>
-        </div>
+
+            <label for="username">Username:</label><br></br>
+            <input type="text" id="username" name="username" placeholder="name@hotmail.com"><br></br>
+
+            <label  for="password">Password:</label><br></br>
+            <input  type="password" id="password" name="password" placeholder="Password"><br></br>
+
+            <button class="button" type="submit" value="Login">Login</button><br></br>
+</div>
+
+            <p class="forgot_password">Forgot password?</p>
+
+
+</div>
+</form>
 
     <a href="/createspectator">
 

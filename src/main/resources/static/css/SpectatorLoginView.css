@@ -1,70 +1,60 @@
-/**
-a{
-    display: inline-block;
+.container {
+    margin: 0 auto;
+    width: 50%; /* adjust the width as needed */
+    text-align: center;
 }
-**/
- */
-.login_field{
-    padding: 0.5em;
-    width: 21.1em;
-    border: 2px solid #747474;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
-    border-radius: 10px;
-    background-color: #FFFFFF;
+.forgot_password {
     font-size: 1em;
 }
 
-.divider_buttons{
-    /*width:5em;*/
-    /*height:auto;*/
-    /*min-height: 1px;*/
-    display:inline-block;
+.create_account {
+    font-size: 1em;
 }
+
+.back_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .buttons{
     text-align: center;
     margin-top: 2em;
 }
-.action_buttons{
-    margin: 5em;
-    position: relative;
-    display: inline;
-    text-align: center;
-}
-.createuserbutton{
-    width: 2em;
-    
-}
-.loginbutton{
-    width: 2em;
-}
 
-#column_container{
-    position: relative;
-}
-
-
-#login-label{
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-.login_text{
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1em;
-    font-weight: 600;
-}
-
-.spectator-button {
-    margin: 0;
-    width: auto;
-    position: relative;
-    top: 30em;
-    text-align: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.button {
+.button{
 
 
     appearance: none;
@@ -108,15 +98,54 @@ a{
     transform: translateY(0);
 }
 
+
+
+/*
 #form-login{
     margin: auto;
     width: 25%;
     padding: 10px;
+}*/
+label{
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
 }
+
+
+
+
+
+
+
+/*
 #test{
     all: unset;
     padding-left: 2em;
 }
+
+.loginbutton{
+     width: 2em;
+ }
+
+ #column_container{
+     position: relative;
+ }
+
+#login-label{
+      margin-top: 2em;
+      margin-bottom: 2em;
+  }
+  .spectator-button {
+      margin: 0;
+      width: auto;
+      position: relative;
+      top: 30em;
+      text-align: center;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  */
+
 /*#form-login{*/
 /*    position: absolute;*/
 /*    transform: translate(-50%,-50%);*/
@@ -148,13 +177,43 @@ a{
 /*}*/
 
 
-.container {
-    display: flex;
-    flex-direction: column;
+
+/*
+a{
+    display: inline-block;
 }
 
-.box {
-    width: 50%;
-    height: 100px;
+
+.login_field{
+    padding: 0.5em;
+    width: 21.1em;
+    border: 2px solid #747474;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-size: 1em;
+}
+
+.divider_buttons{
+    width:5em;
+    height:auto;
+    min-height: 1px;
+    display:inline-block;
+}
+*/
+
+
+
+/*
+.action_buttons{
+    margin: 5em;
+    position: relative;
+    display: inline;
+    text-align: center;
+}
+.createuserbutton{
+    width: 2em;
 
 }
+
+*/
