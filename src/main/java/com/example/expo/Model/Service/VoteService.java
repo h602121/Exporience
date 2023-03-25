@@ -5,13 +5,15 @@ import com.example.expo.Model.Repo.VoteRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class VoteService {
 
     @Autowired
     public VoteRepo voteRepo;
 
-    public int addVote(int posterRating, int contentRating, int presentationRating){
+    public int addVote(Integer posterRating, Integer contentRating, Integer presentationRating){
 
 
        return voteRepo.save(new Vote(posterRating,contentRating,presentationRating)).getId();
@@ -22,6 +24,13 @@ public class VoteService {
 
     }
 
+    public List<Vote> getAllVotes(){
+        return voteRepo.findAll();
+    }
+
+    public List<Vote> getAllVotesById(List<Integer> votesId){
+        return voteRepo.findAllByIdIn(votesId);
+    }
 
 
 

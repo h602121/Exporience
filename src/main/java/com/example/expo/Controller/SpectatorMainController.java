@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class SpectatorMainController {
     @GetMapping
-    public String getSpectatorMain(HttpSession session, HttpServletRequest req) {
+    public String getSpectatorMain(HttpSession session) {
 
         if(!LoginUtil.erBrukerInnlogget(session)) return "redirect:spectatorlogin";
 

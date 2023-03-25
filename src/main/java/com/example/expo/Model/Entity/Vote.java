@@ -5,6 +5,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name="vote", schema = "ExporienceDB")
 public class Vote {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -28,6 +29,7 @@ public class Vote {
         this.contentRating = contentRating;
         this.presentationRating = presentationRating;
     }
+
 
     public int getId() {
         return id;
@@ -60,6 +62,7 @@ public class Vote {
     public void setPresentationRating(Integer presentationRating) {
         this.presentationRating = presentationRating;
     }
+
 
     @Override
     public boolean equals(Object o) {

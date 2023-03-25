@@ -1,15 +1,30 @@
 package com.example.expo.Model.Service;
 
 import com.example.expo.Model.Entity.ExpoPointsHandler;
+import com.example.expo.Model.Entity.Stand;
+import com.example.expo.Model.Entity.Vote;
 import com.example.expo.Model.Repo.ExpoPointHandlerRepo;
+import com.example.expo.VoteListByUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class ExpoPointsHandlerService {
 
 
+
     @Autowired
     public ExpoPointHandlerRepo voteHandlerRepo;
+
+    @Autowired
+    public VoteService voteService;
+
+    @Autowired
+    public StandService standService;
 
 
     public boolean addVoteHandler(int voteId, int userId, String standId, int expoId ){
@@ -18,6 +33,38 @@ public class ExpoPointsHandlerService {
 
         return true;
 
+    }
+
+    public boolean checkIfUseridAndStandIdHasAlreadyVoted(Integer userId, Integer standId){
+        return voteHandlerRepo.getExpoPointsHandlerByUserIdAndStandId(userId,standId) == null;
+    }
+
+    public List<VoteListByUser> getVotesByUserId(Integer userId){
+        System.out.println("user id:" + userId);
+
+       List<ExpoPointsHandler> list = voteHandlerRepo.getAllByUserId(userId);
+
+        System.out.println(" List : " + list.get(0).getVoteId());
+
+        List<Vote> votes = voteService.getAllVotesById(list.stream().map(a -> a.getVoteId()).collect(Collectors.toList()));
+
+        System.out.println("Votes:" + votes.get(0).getContentRating());
+
+        List<Stand> stands = standService.getAllStands();
+
+        System.out.println("Stand: " + stands.get(0).getName());
+
+        List<VoteListByUser> newStands = new ArrayList<>();
+
+        for(int i = 0; i <list.size(); i++){
+            for (int j = 0; j < stands.size(); j++){
+                if(list.get(i).getStandId().equals(stands.get(j).getQrCode())){
+                    newStands.add(new VoteListByUser(votes.get(i),stands.get(j)));
+                }
+            }
+        }
+
+        return newStands;
     }
 
 }

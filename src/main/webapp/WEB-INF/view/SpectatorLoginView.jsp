@@ -33,15 +33,18 @@
             <button class="button" type="submit" value="Login">Login</button>
         </div>
 
-        <div class="box">
-            <a href="/createspectator">
-                <button class="button" type="button" value="Create User">Create user</button>
-            </a>
+    <a href="/createspectator">
 
-        </div>
+        <p class="create_account">Do you need an account, create one here!</p>
+    </a>
+
+    <a href="/">
+    <button class="back-button" type="submit" >Back</button><br></div><br>
+    </a>>
+
+    <div class="container">
+        <a href="/" class="back_button">&larr; Tilbake</a>
     </div>
-
-
 
 
 

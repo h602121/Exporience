@@ -29,7 +29,7 @@
     </div>
 
     <div class="myvotes-button">
-        <a href="/myvotes">
+        <a href="/myratings">
             <button class="button" role="button">My Votes</button>
         </a>
     </div>

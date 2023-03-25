@@ -23,7 +23,7 @@ public class UserService {
 
    }
 
-    public boolean findSpectatorByEmail(String email) {
+    public boolean findUserByEmail(String email) {
 
         User user = userRepo.findByEmail(email);
         if (user == (null)) {

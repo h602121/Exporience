@@ -16,6 +16,7 @@ public class LoginUtil {
         loggUtBruker(request.getSession());
 
         HttpSession session = request.getSession();
+        session.setAttribute("expo",1);
         session.setMaxInactiveInterval(MAX_INTERACTIVE_INTERVAL);
         session.setAttribute("role", role);
 

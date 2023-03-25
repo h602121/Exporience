@@ -18,4 +18,13 @@ public class StandService {
         return standRepo.findAll();
 
     }
+    public boolean addStand(String name, String description){
+
+        standRepo.save(new Stand(name, description));
+
+        return true;
+
+    }
+
+
 }

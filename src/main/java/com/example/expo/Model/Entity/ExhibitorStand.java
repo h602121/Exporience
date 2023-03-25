@@ -14,8 +14,8 @@ public class ExhibitorStand {
     private String standId;
     @Basic
     @Id
-    @Column(name = "exhbitor_stand_id")
-    private String exhbitorStandId;
+    @Column(name = "exhibitor_stand_id")
+    private Integer exhbitorStandId;
 
     public Integer getExhibitorId() {
         return exhibitorId;
@@ -33,11 +33,11 @@ public class ExhibitorStand {
         this.standId = standId;
     }
 
-    public String getExhbitorStandId() {
+    public Integer getExhbitorStandId() {
         return exhbitorStandId;
     }
 
-    public void setExhbitorStandId(String exhbitorStandId) {
+    public void setExhbitorStandId(Integer exhbitorStandId) {
         this.exhbitorStandId = exhbitorStandId;
     }
 
