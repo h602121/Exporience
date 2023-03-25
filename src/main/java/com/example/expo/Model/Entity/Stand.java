@@ -10,7 +10,7 @@ public class Stand {
     @Basic
     @Id
     @Column(name = "qr_code")
-    private String qrCode;
+    private Integer qrCode;
     @Basic
     @Column(name = "name")
     private String name;
@@ -22,8 +22,7 @@ public class Stand {
     public Stand() {
     }
 
-    public Stand(String qrCode, String name, String stand_description) {
-        this.qrCode = qrCode;
+    public Stand(String name, String stand_description) {
         this.name = name;
         this.stand_description = stand_description;
     }
@@ -36,11 +35,11 @@ public class Stand {
         this.stand_description = stand_description;
     }
 
-    public String getQrCode() {
+    public Integer getQrCode() {
         return qrCode;
     }
 
-    public void setQrCode(String qrCode) {
+    public void setQrCode(Integer qrCode) {
         this.qrCode = qrCode;
     }
 

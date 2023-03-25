@@ -27,7 +27,7 @@ public class ExpoPointsHandlerService {
     public StandService standService;
 
 
-    public boolean addVoteHandler(int voteId, int userId, String standId, int expoId ){
+    public boolean addVoteHandler(int voteId, int userId, int standId, int expoId ){
 
         voteHandlerRepo.save(new ExpoPointsHandler(voteId,userId,standId,expoId));
 

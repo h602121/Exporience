@@ -19,7 +19,7 @@ public class ExpoPointsHandler {
     private Integer userId;
     @Basic
     @Column(name = "stand_id")
-    private String standId;
+    private Integer standId;
     @Basic
     @Column(name = "expo_id")
     private Integer expoId;
@@ -27,7 +27,7 @@ public class ExpoPointsHandler {
     public ExpoPointsHandler() {
     }
 
-    public ExpoPointsHandler(Integer voteId, Integer userId, String standId, Integer expoId) {
+    public ExpoPointsHandler(Integer voteId, Integer userId, Integer standId, Integer expoId) {
         this.voteId = voteId;
         this.userId = userId;
         this.standId = standId;
@@ -58,11 +58,11 @@ public class ExpoPointsHandler {
         this.userId = userId;
     }
 
-    public String getStandId() {
+    public Integer getStandId() {
         return standId;
     }
 
-    public void setStandId(String standId) {
+    public void setStandId(Integer standId) {
         this.standId = standId;
     }
 

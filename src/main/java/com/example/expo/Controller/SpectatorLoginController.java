@@ -34,14 +34,14 @@ public class SpectatorLoginController {
                 ra.addFlashAttribute("error_message", "User does not exist");
                 return "redirect:/spectatorlogin";
 
-        }
-        if(!(userService.validateLogin(username,password))){
-            ra.addFlashAttribute("error_message", "Innlogging feilet");
-            return "redirect:/spectatorlogin";
-        } else{
-            LoginUtil.loggInnBruker(req, 1);
-            req.getSession().setAttribute("username", username);
-            return "redirect:spectatormain";
+            }
+            if (!(userService.validateLogin(username, password))) {
+                ra.addFlashAttribute("error_message", "Innlogging feilet");
+                return "redirect:/spectatorlogin";
+            } else {
+                LoginUtil.loggInnBruker(req, 1);
+                req.getSession().setAttribute("username", username);
+                return "redirect:spectatormain";
 
             }
 
