@@ -6,12 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/ratingselector")
 public class RatingSelectorController {
 
     @GetMapping
-    public String getRatingSelector(){
+    public String getRatingSelector(HttpSession session){
+
+        if(!LoginUtil.erBrukerInnlogget(session)){
+            return "redirect:spectatorlogin";
+        }
         return "RatingSelectorView";
     }
 

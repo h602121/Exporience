@@ -2,6 +2,7 @@ package com.example.expo.Controller;
 
 import com.example.expo.Model.Role;
 import com.example.expo.Model.Service.UserService;
+import com.example.expo.util.LoginUtil;
 import com.example.expo.util.PassordUtil;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import javax.servlet.http.HttpSession;
+
+
+
 
 @Controller
 @RequestMapping("/createspectator")
@@ -28,7 +33,8 @@ public class CreateSpectatorController {
     private UserService userService;
 
     @GetMapping
-    public String getCreateSpectator(){
+    public String getCreateSpectator(HttpSession session){
+
         return "CreateSpectatorView";
     }
 
