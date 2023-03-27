@@ -48,11 +48,14 @@
                 <button class="button" type="submit" value="Register">Register</button>
 
             </div>
+>
+        </form>
+        <div>
+            <a href="/exhibitorlogin">
+                <button class="button">Gå tilbake</button>
+            </a>
+        </div>
 
-        </form>
-        <form id="back_button" action="/exhibitorlogin">
-            <a href="/exhibitorlogin" class="button"><button>Gå tilbake</button></a>
-        </form>
 
     </body>
 
