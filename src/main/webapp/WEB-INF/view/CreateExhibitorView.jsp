@@ -50,7 +50,9 @@
             </div>
 
         </form>
-
+        <form id="back_button" action="/exhibitorlogin">
+            <a href="/exhibitorlogin" class="button"><button>Gå tilbake</button></a>
+        </form>
 
     </body>
 
