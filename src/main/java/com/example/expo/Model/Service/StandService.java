@@ -25,6 +25,10 @@ public class StandService {
         return stand.getQrCode();
 
     }
+    public Stand getStandbyStandId(Integer standId){
+        return standRepo.getStandByQrCode(standId);
+    }
+
 
 
 }

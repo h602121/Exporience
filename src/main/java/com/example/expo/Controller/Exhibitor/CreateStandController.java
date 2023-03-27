@@ -1,5 +1,6 @@
 package com.example.expo.Controller.Exhibitor;
 
+import com.example.expo.Model.Entity.User;
 import com.example.expo.Model.Service.ExhibitorStandService;
 import com.example.expo.Model.Service.StandService;
 import com.example.expo.Model.Service.UserService;
@@ -32,10 +33,10 @@ public class CreateStandController {
     @PostMapping
     public String postCreateStand(@RequestParam String name, @RequestParam String stand_description, HttpServletRequest req){
 
-        System.out.println(req.getAttribute("username"));
 
-//    Integer standId = standService.addStand(name, stand_description);
-//    expoStandService.addExhbitorStand(userId, standId);
+        Integer userId = userService.findByMail((String)req.getSession().getAttribute("username")).getId();
+        Integer standId = standService.addStand(name, stand_description);
+        expoStandService.addExhbitorStand(userId, standId);
 
 
         return "redirect:/viewStandview";

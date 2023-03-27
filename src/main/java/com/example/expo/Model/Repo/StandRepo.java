@@ -9,4 +9,6 @@ public interface StandRepo extends JpaRepository<Stand, String> {
 
     List <Stand> findAll();
 
+    Stand getStandByQrCode(Integer id);
+
 }
