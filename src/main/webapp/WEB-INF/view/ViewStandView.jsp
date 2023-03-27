@@ -31,6 +31,11 @@
 
 
         </div>
+        <div>
+        <a href="addexhibitor">
+            <button class="button" role="button">View Stand</button>
+        </a>
+        </div>
 
 </div>
 
