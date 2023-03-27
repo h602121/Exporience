@@ -7,7 +7,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "stand",schema = "exporiencedb")
 public class Stand {
-    @Basic
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "qr_code")
     private Integer qrCode;

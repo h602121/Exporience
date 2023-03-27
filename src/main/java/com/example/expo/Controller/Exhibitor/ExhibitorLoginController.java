@@ -48,8 +48,15 @@ public class ExhibitorLoginController {
         } else {
             LoginUtil.loggInnBruker(req, Role.EXHIBITOR.getRoleID());
             req.getSession().setAttribute("username", username);
-            System.out.println("Tor Var hwer: " + exhibitorStandService.findStandByUserId(userService.findByMail(username).getId()));
-            req.getSession().setAttribute("stand", exhibitorStandService.findStandByUserId(userService.findByMail(username).getId()));
+            Integer stand = null;
+
+            try {
+               stand = exhibitorStandService.findStandByUserId(userService.findByMail(username).getId());
+            }catch (NullPointerException e){
+                stand = null;
+            }
+
+            req.getSession().setAttribute("stand", stand);
             return "redirect:exhibitormain";
 
         }

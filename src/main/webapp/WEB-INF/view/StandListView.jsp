@@ -39,7 +39,7 @@
             </div>
 
             <p>${stand.stand_description}</p>
-            <form id="form-login" method="post" action="/standlist">
+            <form id="form-login" method="post">
 
                 <p>Poster</p>
                 <div class="radio_buttons">

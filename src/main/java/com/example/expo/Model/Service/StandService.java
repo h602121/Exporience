@@ -18,7 +18,7 @@ public class StandService {
         return standRepo.findAll();
 
     }
-    public boolean addStand(String name, String description){
+    public Integer addStand(String name, String description){
 
         Stand stand = standRepo.save(new Stand(name, description));
 

@@ -1,6 +1,8 @@
 package com.example.expo.Controller.Exhibitor;
 
+import com.example.expo.Model.Service.ExhibitorStandService;
 import com.example.expo.Model.Service.StandService;
+import com.example.expo.Model.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -14,6 +16,12 @@ public class CreateStandController {
 
     @Autowired
     private StandService standService;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private ExhibitorStandService expoStandService;
 
     @GetMapping
     public String getCreateStand(){
@@ -29,7 +37,6 @@ public class CreateStandController {
 //    Integer standId = standService.addStand(name, stand_description);
 //    expoStandService.addExhbitorStand(userId, standId);
 
-    standService.addStand(name, stand_description);
 
         return "redirect:/viewStandview";
 

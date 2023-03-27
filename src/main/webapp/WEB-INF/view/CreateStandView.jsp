@@ -15,7 +15,7 @@
             <h1>EXPORIENCE</h1>
         </div>
 
-        <p>Create Spectator</p>
+        <p>Create Stand</p>
 
         <c:if test="${redirectMessage != null}">
             <p style="color: red">${redirectMessage}</p>
@@ -25,10 +25,10 @@
             <div id="column_container">
 
                 <label for="firstname">Stand Name</label>
-                <input placeholder="FirstName" class="createUser_field" name="firstName" id="firstname" type="text"/>
+                <input placeholder="FirstName" class="createUser_field" name="name" id="firstname" type="text"/>
 
                 <label for="lastname">Stand Description</label>
-                <input placeholder="LastName" class="createUser_field" name="lastName" id="lastname" type="text"/>
+                <input placeholder="LastName" class="createUser_field" name="stand_description" id="lastname" type="text"/>
 
 
                 <button class="button" type="submit" value="Register">Register</button>
