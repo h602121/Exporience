@@ -13,7 +13,7 @@
 </div>
 
 <div class="welcome_text">
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+<p>Welcome to Exporience, who are you?</p>
 </div>
 <div class="buttons">
 
@@ -35,7 +35,14 @@
         <button class="button" role="button">Jury</button>
         </a>
     </div>
+
 </div>
+<div class="main_info">
+    <p class="main_info_paragraph">Welcome to our exciting new website! Here, you'll find the ultimate platform for rating and reviewing exhibition stands. Whether you're a seasoned expo-goer or a first-time visitor, we understand the importance of finding the most impressive stands to visit, and that's why we've created this website.
+
+        Our platform provides an easy-to-use interface that allows you to rate stands based on their poster, presentation and content. By doing so, you can help others discover the best stands, and also provide valuable feedback to the stand owners themselves.</p>
+</div>
+
 
 </body>
 </html>
