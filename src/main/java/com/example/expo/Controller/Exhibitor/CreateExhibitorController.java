@@ -83,7 +83,7 @@ public class CreateExhibitorController {
         String passordMedSalt = PassordUtil.hashMedSalt(password, salt);
 
         userService.createSpectator(phonenumber, firstName, lastName, email, passordMedSalt, Role.EXHIBITOR.getRoleID(), salt);
-        return "redirect:/exhibitormain";
+        return "redirect:/exhibitorlogin";
 
     }
 }
