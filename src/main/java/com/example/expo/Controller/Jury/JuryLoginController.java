@@ -1,23 +1,23 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Jury;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @Controller
-@RequestMapping("/jurymain")
+@RequestMapping("/jurylogin")
+public class JuryLoginController {
 
-public class JuryMainController {
     @GetMapping
-    public String getJuryMain() {
-
-        return "JuryMainView";
+    public String getjurylogin() {
+        return "JuryLoginView";
     }
 
     @PostMapping
-    public String postJuryMain(){
-        return "redirect:jurymain";
+    public String postjurylogin() {
+
+        return "jurylogin";
     }
+
 }

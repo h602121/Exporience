@@ -17,7 +17,7 @@
 
 <p>Jury Login </p>
 
-<div id="form-login" method="post" action="/jurylogin">
+<div id="form-login" method="post">
 
     <div id="column_container">
         <div id="login-label">
@@ -38,13 +38,13 @@
 
         <div class="action_buttons">
 
-            <a href="/jurymain">
+            <a href="jurymain">
                 <button class="button" type="submit" value="Login">Login</button>
             </a>
 
 
             <div class="divider_buttons"></div>
-            <a href="/createjury">
+            <a href="createjury">
                 <button class="button" type="submit" value="Create User">Create user</button>
             </a>
         </div>

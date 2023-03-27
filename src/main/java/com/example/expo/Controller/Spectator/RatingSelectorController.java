@@ -1,25 +1,28 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Spectator;
 
 import com.example.expo.util.LoginUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import javax.servlet.http.HttpSession;
+
 @Controller
-@RequestMapping("/seewinner")
-public class SeeWinnerController {
+@RequestMapping("/ratingselector")
+public class RatingSelectorController {
 
     @GetMapping
-    public String getSeeWinner(HttpSession session) {
-        if(!LoginUtil.erBrukerInnlogget(session)) {
+    public String getRatingSelector(HttpSession session){
+
+        if(!LoginUtil.erBrukerInnlogget(session)){
             return "redirect:spectatorlogin";
         }
-        return "SeeWinnerView";
+        return "RatingSelectorView";
     }
 
     @PostMapping
-    public String postSeeWinner() {
-        return "redirect:seewinner";
+    public String postRatingSelector(){
+        return "redirect:standlist";
     }
 }

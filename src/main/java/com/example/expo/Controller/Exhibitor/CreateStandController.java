@@ -1,13 +1,12 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Exhibitor;
 
 import com.example.expo.Model.Service.StandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/createstand")
@@ -23,8 +22,12 @@ public class CreateStandController {
 
     }
     @PostMapping
-    public String postCreateStand(@RequestParam String name, @RequestParam String stand_description){
+    public String postCreateStand(@RequestParam String name, @RequestParam String stand_description, HttpServletRequest req){
 
+        System.out.println(req.getAttribute("username"));
+
+//    Integer standId = standService.addStand(name, stand_description);
+//    expoStandService.addExhbitorStand(userId, standId);
 
     standService.addStand(name, stand_description);
 

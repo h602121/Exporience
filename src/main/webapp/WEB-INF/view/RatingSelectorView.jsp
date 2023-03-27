@@ -14,13 +14,13 @@
 
 <div class="buttons">
         <div class="QR-button">
-            <a href = "/QRrating">
+            <a href = "QRrating">
             <button class="button" type="submit" role="button">QR</button>
             </a>
         </div>
 
             <div class="stand-button">
-                <a href="/standlist">
+                <a href="standlist">
                     <button class="button" role="button">Stand</button>
                 </a>
             </div>

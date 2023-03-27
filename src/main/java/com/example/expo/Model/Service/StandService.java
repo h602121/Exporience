@@ -20,9 +20,9 @@ public class StandService {
     }
     public boolean addStand(String name, String description){
 
-        standRepo.save(new Stand(name, description));
+        Stand stand = standRepo.save(new Stand(name, description));
 
-        return true;
+        return stand.getQrCode();
 
     }
 

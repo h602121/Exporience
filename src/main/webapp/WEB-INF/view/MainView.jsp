@@ -18,20 +18,20 @@
 <div class="buttons">
 
     <div class="spectator-button">
-        <a href="/spectatorlogin">
+        <a href="spectatorlogin">
             <button class="button" type="submit" role="button">Spectator</button>
         </a>
     </div>
 
 
     <div class="exhibitor-button">
-        <a href="/exhibitorlogin">
+        <a href="exhibitorlogin">
         <button class="button" role="button">Exhibitor</button>
         </a>
     </div>
 
     <div class="jury-button">
-        <a href="/jurylogin">
+        <a href="jurylogin">
         <button class="button" role="button">Jury</button>
         </a>
     </div>

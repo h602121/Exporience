@@ -1,8 +1,7 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Spectator;
 
 import com.example.expo.Model.Role;
 import com.example.expo.Model.Service.UserService;
-import com.example.expo.util.LoginUtil;
 import com.example.expo.util.PassordUtil;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

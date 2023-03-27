@@ -1,4 +1,4 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Exhibitor;
 
 import com.example.expo.Model.Service.UserService;
 import com.example.expo.util.LoginUtil;

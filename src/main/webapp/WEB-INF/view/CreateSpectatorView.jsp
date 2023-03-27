@@ -20,7 +20,7 @@
 <c:if test="${redirectMessage != null}">
     <p style="color: red">${redirectMessage}</p>
 </c:if>
-<form id="form-createUserSpectator" method="post" action="/createspectator">
+<form id="form-createUserSpectator" method="post" action="createspectator">
 
     <div id="column_container">
 

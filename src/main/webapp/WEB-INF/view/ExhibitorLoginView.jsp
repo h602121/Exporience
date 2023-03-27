@@ -15,7 +15,7 @@
             <h1>EXPORIENCE</h1>
         </div>
 
-        <form id="form-login" method="post" action="/exhibitorlogin">
+        <form id="form-login" method="post" action="exhibitorlogin">
 
             <p>Exhibitor Login </p>
 
@@ -37,7 +37,7 @@
 
         </form>
 
-        <a href="/createexhibitor">
+        <a href="createexhibitor">
             <button class="button" type="submit" value="Create User">Create user</button>
         </a>
 

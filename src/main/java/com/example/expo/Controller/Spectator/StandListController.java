@@ -1,4 +1,4 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Spectator;
 
 
 import com.example.expo.Model.Entity.Stand;

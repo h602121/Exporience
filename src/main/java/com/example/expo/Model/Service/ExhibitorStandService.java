@@ -10,7 +10,7 @@ public class ExhibitorStandService {
     @Autowired
     public ExhibitorStandRepo exhibitorStandRepo;
 
-    public String findStandByUserId(Integer userId){
+    public Integer findStandByUserId(Integer userId){
         return exhibitorStandRepo.findByExhibitorId(userId).getStandId();
     }
 }

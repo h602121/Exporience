@@ -1,4 +1,4 @@
-package com.example.expo.Controller;
+package com.example.expo.Controller.Spectator;
 
 import com.example.expo.util.LoginUtil;
 import javax.servlet.http.HttpServletRequest;

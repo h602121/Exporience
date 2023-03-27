@@ -16,7 +16,7 @@
         <div class="buttons">
 
             <div class="winner-button">
-                <a href="/winner">
+                <a href="winner">
                     <button class="button" type="submit" role="button">See Winner</button>
                 </a>
             </div>
@@ -27,13 +27,13 @@
             </div>
 
             <div class="myvotes-button">
-                <a href="/viewstand">
+                <a href="viewstand">
                     <button class="button" role="button">View Stand</button>
                 </a>
             </div>
 
             <div class="signout-button">
-                <a href="/">
+                <a href="exhibitorlogin">
                     <button class="button" role="button">Sign out</button>
                 </a>
             </div>

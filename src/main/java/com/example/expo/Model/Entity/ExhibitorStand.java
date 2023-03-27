@@ -11,11 +11,19 @@ public class ExhibitorStand {
     private Integer exhibitorId;
     @Basic
     @Column(name = "stand_id")
-    private String standId;
-    @Basic
+    private Integer standId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "exhibitor_stand_id")
     private Integer exhbitorStandId;
+
+    public ExhibitorStand() {
+    }
+
+    public ExhibitorStand(Integer exhibitorId, Integer standId) {
+        this.exhibitorId = exhibitorId;
+        this.standId = standId;
+    }
 
     public Integer getExhibitorId() {
         return exhibitorId;
@@ -25,11 +33,11 @@ public class ExhibitorStand {
         this.exhibitorId = exhibitorId;
     }
 
-    public String getStandId() {
+    public Integer getStandId() {
         return standId;
     }
 
-    public void setStandId(String standId) {
+    public void setStandId(Integer standId) {
         this.standId = standId;
     }
 
