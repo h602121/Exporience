@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <link rel="stylesheet" href="css/SpectatorLoginView.css">
+<head> 
+    
     <link rel="stylesheet" href="css/Standard.css">
+    <link rel="stylesheet" href="css/SpectatorLoginView.css">
+   
 
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
 </head>
@@ -17,42 +19,30 @@
 
 <p>Jury Login </p>
 
-<div id="form-login" method="post">
+<form class="login" method="post">
+    <div class="container">
+        <div>
 
-    <div id="column_container">
-        <div id="login-label">
-            <label class="login_text" for="username">Username</label>
-            <input placeholder="jury@hvl.no" class="login_field" name="username" id="username" type="text"/>
-        </div>
 
-        <label class="login_text" for="password">Password</label>
-        <input placeholder="Password" class="login_field" name="password" id="password" type="password"/>
+            <label class="label" for="username">Username:</label><br></br>
+            <input class="input" type="text" id="username" name="username" placeholder="email@hotmail.com"><br></br>
 
-    </div>
+            <label class="label"for="input-field">Password:</label><br></br>
+            <input id="input-field" class="input" type="password" id="password" name="password" placeholder="Password"><br></br>
 
-</div>
-
-<div id="create-user">
-
-    <div class="buttons">
-
-        <div class="action_buttons">
-
-            <a href="jurymain">
+            <div class="button-container">
                 <button class="button" type="submit" value="Login">Login</button>
-            </a>
+                <a href="createjury">
+                    <button class="button" type="button">Create user</button>
+                </a>
+            </div>
 
-
-            <div class="divider_buttons"></div>
-            <a href="createjury">
-                <button class="button" type="submit" value="Create User">Create user</button>
-            </a>
+            <br></br>
         </div>
 
+
+
     </div>
-</div>
-
-
 </form>
 
 

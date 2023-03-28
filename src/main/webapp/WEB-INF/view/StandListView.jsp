@@ -24,9 +24,9 @@
 
             <button class="info-btn">Click me for more info about rating criteria</button>
             <div class="info-box">
-                <h3>Poster: </h3> Blabla
-                <h3>Content: </h3> Badsfadsf
-                <h3>Presentation: </h3> asdfasdf
+                <h1>Poster: </h1> Evaluate visual design, messaging, and impact based on clarity, creativity, and relevance.
+                <h1>Content: </h1>Evaluate relevance, accuracy, organization, coherence, and quality based on research, clarity, usefulness, and credibility.
+                <h1>Presentation: </h1> Evaluate engagement, key message delivery, objectives achievement, organization, visuals, delivery, audience interaction, and impact.
             </div>
 
 

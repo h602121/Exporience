@@ -3,8 +3,10 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="css/SpectatorLoginView.css">
+
         <link rel="stylesheet" href="css/Standard.css">
+        <link rel="stylesheet" href="css/SpectatorLoginView.css">
+
 
         <meta name="viewport" content="width=device-width, initial-scale=0.7">
     </head>
@@ -15,31 +17,34 @@
             <h1>EXPORIENCE</h1>
         </div>
 
-        <form id="form-login" method="post" action="exhibitorlogin">
+        <p>Exhibitor Login </p>
 
-            <p>Exhibitor Login </p>
+        <form class="login" method="post">
+            <div class="container">
+                <div>
 
-            <div id="column_container">
-                <div id="login-label">
-                    <label class="login_text" for="username">Username</label>
-                    <input placeholder="exhibitor@hvl.no" class="login_field" name="username" id="username"
-                           type="text"/>
+
+                    <label class="label" for="username">Username:</label><br></br>
+                    <input class="input" type="text" id="username" name="username" placeholder="email@hotmail.com"><br></br>
+
+                    <label class="label"for="input-field">Password:</label><br></br>
+                    <input id="input-field" class="input" type="password" id="password" name="password" placeholder="Password"><br></br>
+
+                    <div class="button-container">
+                        <button class="button" type="submit" value="Login">Login</button>
+                        <a href="createexhibitor">
+                            <button class="button" type="button">Create user</button>
+                        </a>
+                    </div>
+
+                    <br></br>
                 </div>
 
-                <label class="login_text" for="password">Password</label>
-                <input placeholder="Password" class="login_field" name="password" id="password" type="password"/>
+
 
             </div>
-
-
-            <button class="button" type="submit" value="Login">Login</button>
-
-
         </form>
 
-        <a href="createexhibitor">
-            <button class="button" type="submit" value="Create User">Create user</button>
-        </a>
 
     </body>
 

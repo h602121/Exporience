@@ -28,26 +28,29 @@
                 <div>
 
 
-                    <label for="username">Username:</label><br></br>
-                    <input type="text" id="username" name="username" placeholder="name@hotmail.com"><br></br>
+                    <label class="label" for="username">Username:</label><br></br>
+                    <input class="input" type="text" id="username" name="username" placeholder="email@hotmail.com"><br></br>
 
-                    <label for="password">Password:</label><br></br>
-                    <input type="password" id="password" name="password" placeholder="Password"><br></br>
+                    <label class="label">Password:</label><br></br>
+                    <input  class="input" type="password" id="password" name="password" placeholder="Password"><br></br>
 
-                    <button class="button" type="submit" value="Login">Login</button>
+                    <div class="button-container">
+                        <button class="button" type="submit" value="Login">Login</button>
+                        <a href="createspectator">
+                        <button class="button" type="button">Create user</button>
+                        </a>
+                    </div>
+
                     <br></br>
                 </div>
 
-                <p class="forgot_password">Forgot password?</p>
 
 
             </div>
         </form>
 
-        <a href="createspectator">
 
-            <p class="create_account">Do you need an account, create one here!</p>
-        </a>
+
 
     </body>
 

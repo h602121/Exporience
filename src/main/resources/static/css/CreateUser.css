@@ -1,4 +1,4 @@
-.container {
+.container{
     margin: 0 auto;
     width: 50%;
     text-align: center;
@@ -65,12 +65,13 @@
 }
 
 
-label {
+.label {
     display: block;
+    margin-top: 1em;
     font-weight: bold;
 }
 
-.input {
+.input{
     display: block;
     width: 100%;
     padding: 10px;
@@ -92,121 +93,3 @@ label {
     outline: none;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-
-
-/*
-.forgot_password {
-    font-size: 1em;
-}
-
-.create_account {
-    font-size: 1em;
-}
-*/
-/*
-#form-login{
-    margin: auto;
-    width: 25%;
-    padding: 10px;
-}*/
-
-
-/*
-#test{
-    all: unset;
-    padding-left: 2em;
-}
-
-.loginbutton{
-     width: 2em;
- }
-
- #column_container{
-     position: relative;
- }
-
-#login-label{
-      margin-top: 2em;
-      margin-bottom: 2em;
-  }
-  .spectator-button {
-      margin: 0;
-      width: auto;
-      position: relative;
-      top: 30em;
-      text-align: center;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
-  */
-
-/*#form-login{*/
-/*    position: absolute;*/
-/*    transform: translate(-50%,-50%);*/
-/*    left:50%;*/
-/*    top: 50%;*/
-/*    margin-top: 5em;*/
-/*}*/
-
-/*#form-login>div{*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-
-/*    */
-/*}*/
-/*#form-login>div>*{*/
-/*    display: flex;*/
-
-
-/*}*/
-
-/*.login-button{*/
-/*    margin: 0;*/
-/*    width: auto;*/
-/*    position: relative;*/
-/*    top: 5em;*/
-/*    text-align: center;*/
-/*    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
-/*}*/
-
-
-
-/*
-a{
-    display: inline-block;
-}
-
-
-.login_field{
-    padding: 0.5em;
-    width: 21.1em;
-    border: 2px solid #747474;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    font-size: 1em;
-}
-
-.divider_buttons{
-    width:5em;
-    height:auto;
-    min-height: 1px;
-    display:inline-block;
-}
-*/
-
-
-
-/*
-.action_buttons{
-    margin: 5em;
-    position: relative;
-    display: inline;
-    text-align: center;
-}
-.createuserbutton{
-    width: 2em;
-
-}
-
-*/

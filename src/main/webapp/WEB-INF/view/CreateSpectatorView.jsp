@@ -3,8 +3,10 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
+
     <link rel="stylesheet" href="css/Standard.css">
+    <link rel="stylesheet" href="css/CreateUser.css">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
 </head>
@@ -22,29 +24,30 @@
 </c:if>
 <form id="form-createUserSpectator" method="post" action="createspectator">
 
-    <div id="column_container">
+    <div class="container">
+        <div>
 
-        <label for="firstname">FirstName</label>
-        <input placeholder="FirstName" class="createUser_field" name="firstName" id="firstname" type="text"/>
+        <label class="label" >FirstName</label>
+        <input   class="input" placeholder="FirstName"  name="firstName"  type="text"/>
 
-        <label for="lastname">LastName</label>
-        <input placeholder="LastName" class="createUser_field" name="lastName" id="lastname" type="text"/>
+        <label class="label" >LastName</label>
+        <input   class="input" placeholder="LastName"  name="lastName"  type="text"/>
 
-        <label for="phonenumber">Phonenumber</label>
-        <input placeholder="phonenumber" class="createUser_field" name="phonenumber" id="phonenumber" type="text"/>
+        <label class="label">Phonenumber</label>
+        <input  class="input" placeholder="phonenumber"  name="phonenumber"  type="text"/>
 
-        <label for="email">Email</label>
-        <input placeholder="Email" class="createUser_field" name="email" id="email" type="text"/>
+        <label class="label" >Email</label>
+        <input   class="input"placeholder="Email"  name="email"  type="text"/>
 
-        <label for="password">Password</label>
-        <input placeholder="Password" class="createUser_field" name="password" id="password" type="password"/>
+        <label class="label" >Password</label>
+        <input  class="input" placeholder="Password"  name="password"  type="password"/>
 
-        <label for="confirmpassword">Confirm Password</label>
-        <input placeholder="Confirm Password" class="creatUser_field" name="confirmPassword" id="confirmpassword" type="password"/>
+        <label class="label" >Confirm Password</label>
+        <input  class="input" placeholder="Confirm Password"  name="confirmPassword"  type="password"/>
 
 
         <button class="button" type="submit" value="Register">Register</button>
-
+    </div>
     </div>
 
 </form>
