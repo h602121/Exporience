@@ -41,6 +41,9 @@
                         <div class="radio_buttons">
                             <p>${vote.votes.presentationRating}</p>
                         </div>
+                        <div class="spacer">
+
+                        </div>
 
 
                 </div>

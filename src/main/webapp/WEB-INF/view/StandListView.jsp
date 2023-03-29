@@ -22,23 +22,35 @@
 
         <div>
 
-            <button class="info-btn">Click me for more info about rating criteria</button>
-            <div class="info-box">
-                <h1>Poster: </h1> Evaluate visual design, messaging, and impact based on clarity, creativity, and relevance.
-                <h1>Content: </h1>Evaluate relevance, accuracy, organization, coherence, and quality based on research, clarity, usefulness, and credibility.
-                <h1>Presentation: </h1> Evaluate engagement, key message delivery, objectives achievement, organization, visuals, delivery, audience interaction, and impact.
-            </div>
 
 
             <c:forEach var="stand" items="${stands}">
             <div class="stand">
                 <div class="stand_header">
                 <div class="stand_header_text">
-                    <h2>${stand.name}</h2>
+                    <h2>${stand.name}
+
+                        <button class="read-more-info-icon modal-right">i<span class="hidden-info">
+
+                            Poster: <br></br>Evaluate visual design, messaging,
+                            and impact based on clarity, creativity, and relevance. <br></br>
+
+                            Content: <br></br>Evaluate relevance, accuracy, organization, coherence,
+                            and quality based on research, clarity, usefulness, and credibility.<br></br>
+
+                            Presentation: <br></br>Evaluate engagement, key message delivery,
+                            objectives achievement, organization, visuals, delivery, audience interaction, and impact.<br></br>
+
+                        </span></button>
+
+                    </h2>
                 </div>
             </div>
 
+
             <p>${stand.stand_description}</p>
+
+
             <form id="form-login" method="post">
 
                 <p>Poster</p>
