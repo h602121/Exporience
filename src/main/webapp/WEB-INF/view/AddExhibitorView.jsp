@@ -7,8 +7,10 @@
 --%>
 <html>
 <head>
-    <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
+
     <link rel="stylesheet" href="css/Standard.css">
+    <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
 </head>
@@ -19,19 +21,19 @@
     <h1>EXPORIENCE</h1>
 </div>
 
-<p>Create Stand</p>
+<p>Add exhibitor to your stand</p>
 
 <c:if test="${redirectMessage != null}">
     <p style="color: red">${redirectMessage}</p>
 </c:if>
-<form id="form-createUserSpectator" method="post">
+<form class="add-container" method="post">
 
-    <div id="column_container">
+    <div>
 
-        <label for="firstname">Stand Name</label>
-        <input placeholder="FirstName" class="createUser_field" name="email" id="firstname" type="text"/>
+        <label class="label" for="firstname">Exhibitor Email</label>
+        <input placeholder="email@hotmail.no" class="input" name="email" id="firstname" type="text"/>
 
-        <button class="button" type="submit" value="Register">Register</button>
+        <button class="button" type="submit" value="Register">Add</button>
 
     </div>
 
