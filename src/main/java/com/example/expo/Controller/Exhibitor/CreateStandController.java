@@ -39,7 +39,8 @@ public class CreateStandController {
         expoStandService.addExhbitorStand(userId, standId);
 
 
-        return "redirect:/viewStandview";
+
+        return "redirect:/ViewStandView";
 
     }
 

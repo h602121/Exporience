@@ -1,8 +1,8 @@
 package com.example.expo.Controller.Exhibitor;
 
-import com.example.expo.Model.Service.ExhibitorStandService;
-import com.example.expo.Model.Service.StandService;
-import com.example.expo.Model.Service.UserService;
+import com.example.expo.Model.Entity.Stand;
+import com.example.expo.Model.Entity.Vote;
+import com.example.expo.Model.Service.*;
 import com.example.expo.util.LoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +19,9 @@ import javax.servlet.http.HttpSession;
 public class ViewStandController {
 
     @Autowired
+    public VoteService voteService;
+
+    @Autowired
     public StandService standService;
 
     @Autowired
@@ -26,6 +29,9 @@ public class ViewStandController {
 
     @Autowired
     public UserService userService;
+
+    @Autowired
+    public ExpoPointsHandlerService handlerService;
 
     @GetMapping
     public String getViewStand(Model model, HttpServletRequest req){
@@ -35,6 +41,21 @@ public class ViewStandController {
         }
         Integer userId = userService.findByMail((String)req.getSession().getAttribute("username")).getId();
         Integer standId = exhibitorStandService.findStandByUserId(userId);
+
+
+        List<Vote> votes = voteService.getAllVotesById(handlerService.getAllVotesByStandId(standId));
+
+        double average = 0;
+        for(Vote vote : votes){
+            average = vote.getContentRating();
+            average += vote.getPosterRating();
+            average += vote.getPresentationRating();
+        }
+
+        average = average/votes.size();
+
+        model.addAttribute("avg_rating", average);
+
         model.addAttribute("stand", standService.getStandbyStandId(standId));
         return "ViewStandView";
     }

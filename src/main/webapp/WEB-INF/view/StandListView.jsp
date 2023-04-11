@@ -57,8 +57,8 @@
                 <div class="radio_buttons">
                     <input type="radio" id="poster_one" name="poster_presentation" value="1">
                     <label for="poster_one">1</label>
-                    <input type="radio" id="poster_two" name="poster_presentation" value="2">
-                    <label for="poster_two">2</label>
+                    <input type="radio" id=${stand.qrCode} name="poster_presentation" value="2">
+                    <label for=${stand.qrCode}>2</label>
                     <input type="radio" id="poster_three" name="poster_presentation" value="3">
                     <label for="poster_three">3</label>
                     <input type="radio" id="poster_four" name="poster_presentation" value="4">

@@ -6,38 +6,42 @@
   To change this template use File | Settings | File Templates.
 --%>
 <html>
-<head>
-    <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
-    <link rel="stylesheet" href="css/Standard.css">
+    <head>
+        <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
+        <link rel="stylesheet" href="css/Standard.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
-</head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    </head>
 
-<body>
+    <body>
 
-<div class="header">
-    <h1>EXPORIENCE</h1>
-</div>
+        <div class="header">
+            <h1>EXPORIENCE</h1>
+        </div>
 
-<p>Create Stand</p>
+        <p>Create Stand</p>
 
-<c:if test="${redirectMessage != null}">
-    <p style="color: red">${redirectMessage}</p>
-</c:if>
-<form id="form-createUserSpectator" method="post">
+        <c:if test="${redirectMessage != null}">
+            <p style="color: red">${redirectMessage}</p>
+        </c:if>
 
-    <div id="column_container">
+        <form id="form-createUserSpectator" method="post">
 
-        <label for="firstname">Stand Name</label>
-        <input placeholder="FirstName" class="createUser_field" name="email" id="firstname" type="text"/>
 
-        <button class="button" type="submit" value="Register">Register</button>
 
-    </div>
 
-</form>
+                <div id="column_container">
 
-</body>
+                    <label for="email">User's Email</label>
+                    <input placeholder="FirstName" class="createUser_field" name="email" id="email" type="text"/>
+
+                    <button class="button" type="submit" value="Register">Add user to stand</button>
+
+                </div>
+
+        </form>
+
+    </body>
 
 </html>
 
