@@ -19,6 +19,10 @@
             <p style="color: red">${error_rating_message}</p>
         </c:if>
 
+        <c:if test="${confirmation_rating_message != null}">
+            <p style="color: green">${confirmation_rating_message}</p>
+        </c:if>
+
 
         <div>
 

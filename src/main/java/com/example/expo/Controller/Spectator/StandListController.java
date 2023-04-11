@@ -70,6 +70,7 @@ public class StandListController {
 
         int voteId = voteService.addVote(newMap.get("poster_presentation"),newMap.get("content_presentation"),newMap.get("rating_presentation"));
         pointsHandlerService.addVoteHandler(voteId,username.getId(),stand_id,(Integer)session.getAttribute("expo"));
+        ra.addFlashAttribute("confirmation_rating_message","Voted on stand");
 
         return "redirect:/standlist";
     }
