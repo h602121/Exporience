@@ -6,6 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <title>List of Stands</title>
+        <link rel="stylesheet" href="css/Standard.css">
         <link rel="stylesheet" href="css/StandList.css">
 
 
@@ -13,9 +14,8 @@
     </head>
 
     <body>
-        <div class="header">
             <h1>EXPORIENCE</h1>
-        </div>
+
         <h3>List of Stands</h3>
 
         <c:if test="${error_rating_message != null}">
