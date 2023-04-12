@@ -143,3 +143,40 @@ a {
     top: 0;
     left: 0;
 }
+
+.add-container{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #333;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input:hover {
+    border: 2px solid #666;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}

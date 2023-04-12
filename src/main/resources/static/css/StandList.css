@@ -179,7 +179,7 @@ h3 {
 
 
 button.read-more-info-icon {
-    vertical-align: top;
+    vertical-align: middle;
     background: #d2d2d2;
     height: 18px;
     width: 18px;
@@ -221,4 +221,8 @@ button.read-more-info-icon:hover .hidden-info {
 
 .spacer{
     height: 1em;
+}
+
+.add-member {
+    text-align: center;
 }

@@ -6,42 +6,40 @@
   To change this template use File | Settings | File Templates.
 --%>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
-        <link rel="stylesheet" href="css/Standard.css">
+<head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    </head>
-
-    <body>
-
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
-
-        <p>Create Stand</p>
-
-        <c:if test="${redirectMessage != null}">
-            <p style="color: red">${redirectMessage}</p>
-        </c:if>
-
-        <form id="form-createUserSpectator" method="post">
+    <link rel="stylesheet" href="css/Standard.css">
+    <link rel="stylesheet" href="css/CreateNewUserSpectator.css">
 
 
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+</head>
 
+<body>
 
-                <div id="column_container">
+<div class="header">
+    <h1>EXPORIENCE</h1>
+</div>
 
-                    <label for="email">User's Email</label>
-                    <input placeholder="FirstName" class="createUser_field" name="email" id="email" type="text"/>
+<p>Add exhibitor to your stand</p>
 
-                    <button class="button" type="submit" value="Register">Add user to stand</button>
+<c:if test="${redirectMessage != null}">
+    <p style="color: red">${redirectMessage}</p>
+</c:if>
+<form class="add-container" method="post">
 
-                </div>
+    <div>
 
-        </form>
+        <label class="label" for="firstname">Exhibitor Email</label>
+        <input placeholder="email@hotmail.no" class="input" name="email" id="firstname" type="text"/>
 
-    </body>
+        <button class="button" type="submit" value="Register">Add</button>
+
+    </div>
+
+</form>
+
+</body>
 
 </html>
 
