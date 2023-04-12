@@ -230,7 +230,7 @@ button.read-more-info-icon:hover .hidden-info {
 .info-content {
     display: none;
     padding: 10px;
-    background-color: black;
+    background-color: #9fccf8;
     font-size: 50%;
 
 }
