@@ -218,3 +218,64 @@ button.read-more-info-icon:hover .hidden-info {
 .add-member {
     text-align: center;
 }
+
+
+
+.info-content {
+    display: none;
+    padding: 10px;
+    background-color: black;
+    font-size: 50%;
+
+}
+
+.show {
+    display: block;
+}
+
+
+.stand_header_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-right: 10px;
+}
+
+
+
+
+.stand-title {
+    margin: 0;
+}
+
+
+
+.stand-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-right: 10px;
+}
+
+.info-btnn {
+    background-color: #ddd;
+    color: #555;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -7,6 +7,9 @@
         <meta charset="UTF-8">
         <title>List of Stands</title>
         <link rel="stylesheet" href="css/StandList.css">
+
+
+
     </head>
 
     <body>
@@ -28,22 +31,24 @@
             <div class="stand">
                 <div class="stand_header">
                 <div class="stand_header_text">
+
                     <h2>${stand.name}
 
-                        <button class="read-more-info-icon modal-right">i<span class="hidden-info">
+                        <button class="info-btnn">i</button>
+                        <div class="info-content">
+                            <p>Poster: <br></br>Evaluate visual design, messaging,
+                                and impact based on clarity, creativity, and relevance. <br></br>
 
-                            Poster: <br></br>Evaluate visual design, messaging,
-                            and impact based on clarity, creativity, and relevance. <br></br>
+                                Content: <br></br>Evaluate relevance, accuracy, organization, coherence,
+                                and quality based on research, clarity, usefulness, and credibility.<br></br>
 
-                            Content: <br></br>Evaluate relevance, accuracy, organization, coherence,
-                            and quality based on research, clarity, usefulness, and credibility.<br></br>
+                                Presentation: <br></br>Evaluate engagement, key message delivery,
+                                objectives achievement, organization, visuals, delivery, audience interaction, and impact.<br></br></p>
+                        </div>
 
-                            Presentation: <br></br>Evaluate engagement, key message delivery,
-                            objectives achievement, organization, visuals, delivery, audience interaction, and impact.<br></br>
 
-                        </span></button>
 
-                    </h2>
+                    </h2> 
                 </div>
             </div>
 
@@ -104,5 +109,17 @@
         </div>
 
     </body>
+
+    <script>
+        var infoBtn = document.querySelectorAll('.info-btnn');
+        var infoContent = document.querySelectorAll('.info-content');
+
+        infoBtn.forEach(function (btn,i){
+            btn.addEventListener('click', function() {
+                infoContent[i].classList.toggle('show');
+            });
+        })
+
+    </script>
 
 </html>

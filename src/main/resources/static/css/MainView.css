@@ -78,19 +78,13 @@
     /*position: relative;*/
 }
 
-.main_info {
-    width: 60%;
-    margin: 12em auto;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-}
 .buttons {
     text-align: center;
 }
 
+.main_info {
+    padding: 1em 6em 1em 6em;
+    text-align: center;
+}
 
 
