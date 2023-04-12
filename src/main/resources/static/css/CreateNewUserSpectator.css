@@ -33,6 +33,9 @@ a{
 .createuserbutton{
     width: 2em;
 }
+.add_user_container{
+    margin:auto;
+}
 .loginbutton{
     width: 2em;
 }

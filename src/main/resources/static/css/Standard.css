@@ -1,5 +1,4 @@
 
-
 .header {
     margin: auto;
     width: 100%;
@@ -23,6 +22,7 @@ body {
     width: auto;
     height: auto;
     background-image: url("https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1060&t=st=1678871621~exp=1678872221~hmac=14af8c9bcd06c2eaed906c2f9f07852396ec38a7ba77efcfe8c27c3b10aa7761");
+    /*background-image: url("https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=1380&t=st=1679930798~exp=1679931398~hmac=131a59df9162e3bfc2e06e6affd5580983f70ba2ce3654d35ad814c8aea21ecf");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

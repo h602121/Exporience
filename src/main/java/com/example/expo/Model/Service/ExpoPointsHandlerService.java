@@ -16,7 +16,6 @@ import java.util.stream.Collectors;
 public class ExpoPointsHandlerService {
 
 
-
     @Autowired
     public ExpoPointHandlerRepo voteHandlerRepo;
 
@@ -27,44 +26,46 @@ public class ExpoPointsHandlerService {
     public StandService standService;
 
 
-    public boolean addVoteHandler(int voteId, int userId, int standId, int expoId ){
+    public boolean addVoteHandler(int voteId, int userId, int standId, int expoId) {
 
-        voteHandlerRepo.save(new ExpoPointsHandler(voteId,userId,standId,expoId));
+        voteHandlerRepo.save(new ExpoPointsHandler(voteId, userId, standId, expoId));
 
         return true;
 
     }
 
-    public boolean checkIfUseridAndStandIdHasAlreadyVoted(Integer userId, Integer standId){
-        return voteHandlerRepo.getExpoPointsHandlerByUserIdAndStandId(userId,standId) == null;
+    public boolean checkIfUseridAndStandIdHasAlreadyVoted(Integer userId, Integer standId) {
+        return voteHandlerRepo.getExpoPointsHandlerByUserIdAndStandId(userId, standId) == null;
     }
 
-    public List<VoteListByUser> getVotesByUserId(Integer userId){
+
+    public List<VoteListByUser> getVotesByUserId(Integer userId) {
         System.out.println("user id:" + userId);
 
-       List<ExpoPointsHandler> list = voteHandlerRepo.getAllByUserId(userId);
-
-        System.out.println(" List : " + list.get(0).getVoteId());
+        List<ExpoPointsHandler> list = voteHandlerRepo.getAllByUserId(userId);
 
         List<Vote> votes = voteService.getAllVotesById(list.stream().map(a -> a.getVoteId()).collect(Collectors.toList()));
 
-        System.out.println("Votes:" + votes.get(0).getContentRating());
 
         List<Stand> stands = standService.getAllStands();
 
-        System.out.println("Stand: " + stands.get(0).getName());
 
         List<VoteListByUser> newStands = new ArrayList<>();
 
-        for(int i = 0; i <list.size(); i++){
-            for (int j = 0; j < stands.size(); j++){
-                if(list.get(i).getStandId().equals(stands.get(j).getQrCode())){
-                    newStands.add(new VoteListByUser(votes.get(i),stands.get(j)));
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < stands.size(); j++) {
+                if (list.get(i).getStandId().equals(stands.get(j).getQrCode())) {
+                    newStands.add(new VoteListByUser(votes.get(i), stands.get(j)));
                 }
             }
         }
 
         return newStands;
+    }
+
+    public List<Integer> getAllVotesByStandId(Integer standId) {
+        List<ExpoPointsHandler> allVotes = voteHandlerRepo.getAllByStandId(standId);
+        return allVotes.stream().map(a -> a.getVoteId()).collect(Collectors.toList());
     }
 
 }

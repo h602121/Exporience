@@ -24,26 +24,27 @@ public class AddExhibitorController {
     private ExhibitorStandService exhibitorStandService;
 
     @GetMapping
-    public String getCreateStand(){
+    public String getCreateStand() {
 
         return "AddExhibitorView";
 
     }
 
     @PostMapping
-    public String postAddStand(@RequestParam String email, HttpServletRequest req, RedirectAttributes ra){
+    public String postAddExhibitorToStand(@RequestParam String email, HttpServletRequest req, RedirectAttributes ra) {
 
-        User current = userService.findByMail((String)req.getSession().getAttribute("username"));
+        User current = userService.findByMail((String) req.getSession().getAttribute("username"));
         User addUser = userService.findByMail(email);
 
-        if(addUser == null){
+        if (addUser == null) {
             ra.addFlashAttribute("redirectMessage", "User does not exist");
             return "redirect:/addexhibitor";
+        } else if (addUser.equals(current)) {
+            ra.addFlashAttribute("redirectMessage", "Can't add yourself");
+
         }
-
         Integer standId = exhibitorStandService.findStandByUserId(current.getId());
-        exhibitorStandService.addExhbitorStand(addUser.getId(),standId);
-
+        exhibitorStandService.addExhbitorStand(addUser.getId(), standId);
 
         return "redirect:/viewstand";
     }

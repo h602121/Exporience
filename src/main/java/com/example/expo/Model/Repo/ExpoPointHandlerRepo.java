@@ -12,4 +12,6 @@ public interface ExpoPointHandlerRepo extends JpaRepository<ExpoPointsHandler, I
 
     List<ExpoPointsHandler> getAllByUserId(Integer userId);
 
+    List<ExpoPointsHandler> getAllByStandId(Integer standId);
+
 }
