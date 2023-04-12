@@ -84,9 +84,7 @@ p{
 .stand_header{
     margin: auto;
     width: 100%;
-    border-bottom: 0.3em solid black;
-    border-top: 0.3em solid black;
-    background-color: black;
+    background-color: #9fccf8;
 }
 
 h2{
