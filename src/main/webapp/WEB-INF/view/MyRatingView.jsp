@@ -10,9 +10,10 @@
     </head>
 
     <body>
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
         <h3>List of Stands</h3>
 
 
@@ -29,21 +30,21 @@
                     <p>${vote.stands.stand_description}</p>
 
 
-                        <p>Poster</p>
-                        <div class="radio_buttons">
-                            <p>${vote.votes.posterRating}</p>
-                        </div>
-                        <p>Content</p>
-                        <div class="radio_buttons">
-                            <p>${vote.votes.contentRating}</p>
-                        </div>
-                        <p>Presentation</p>
-                        <div class="radio_buttons">
-                            <p>${vote.votes.presentationRating}</p>
-                        </div>
-                        <div class="spacer">
+                    <p>Poster</p>
+                    <div class="radio_buttons">
+                        <p>${vote.votes.posterRating}</p>
+                    </div>
+                    <p>Content</p>
+                    <div class="radio_buttons">
+                        <p>${vote.votes.contentRating}</p>
+                    </div>
+                    <p>Presentation</p>
+                    <div class="radio_buttons">
+                        <p>${vote.votes.presentationRating}</p>
+                    </div>
+                    <div class="spacer">
 
-                        </div>
+                    </div>
 
 
                 </div>

@@ -8,9 +8,9 @@
 
     <body>
 
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
 
         <div class="welcome_text">
             <p>Welcome to Exporience, who are you?</p>
@@ -50,5 +50,6 @@
 
 
     </body>
+
 </html>
 

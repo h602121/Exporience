@@ -12,9 +12,9 @@
 
     <body>
 
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
 
         <p>Spectator Login </p>
 

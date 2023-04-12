@@ -9,9 +9,10 @@
 
     <body>
 
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
 
         <div class="buttons">
 
@@ -23,7 +24,7 @@
 
 
             <div class="ratingselector-button">
-                    <button class="button" role="button">View Rating</button>
+                <button class="button" role="button">View Rating</button>
             </div>
 
             <div class="myvotes-button">
@@ -40,7 +41,6 @@
 
         </div>
     </body>
-
 
 
 </html>

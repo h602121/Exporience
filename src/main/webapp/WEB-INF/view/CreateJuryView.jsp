@@ -20,11 +20,12 @@
 
 <body>
 
-<div class="header">
-    <h1>EXPORIENCE</h1>
-</div>
 
-<p>Create Jury User</p>
+    <a href="home"><h1>EXPORIENCE</h1></a>
+
+
+
+    <p>Create Jury User</p>
 
 <c:if test="${redirectMessage != null}">
     <p style="color: red">${redirectMessage}</p>

@@ -13,9 +13,10 @@
 
     <body>
 
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
 
         <p>Create Stand</p>
 
@@ -24,13 +25,15 @@
         </c:if>
         <form class="add-container" method="post">
 
-                <div>
+            <div>
 
                 <label class="label" for="firstname">Stand Name</label>
-                <input class="input" placeholder="FirstName" class="createUser_field" name="name" id="firstname" type="text"/>
+                <input class="input" placeholder="FirstName" class="createUser_field" name="name" id="firstname"
+                       type="text"/>
 
                 <label class="label" for="lastname">Stand Description</label>
-                <input class="input" placeholder="LastName" class="createUser_field" name="stand_description" id="lastname" type="text"/>
+                <input class="input" placeholder="LastName" class="createUser_field" name="stand_description"
+                       id="lastname" type="text"/>
 
 
                 <button class="button" type="submit" value="Register">Register</button>
@@ -38,10 +41,6 @@
 
 
         </form>
-
-
-
-
 
 
     </body>

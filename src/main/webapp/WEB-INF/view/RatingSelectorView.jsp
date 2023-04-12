@@ -6,24 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.9">
 
     </head>
-<body>
+    <body>
 
-<div class="header">
-<h1>EXPORIENCE</h1>
-</div>
 
-<div class="buttons">
-        <div class="QR-button">
-            <a href = "QRrating">
-            <button class="button" type="submit" role="button">QR</button>
-            </a>
-        </div>
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
+
+        <div class="buttons">
+            <div class="QR-button">
+                <a href="QRrating">
+                    <button class="button" type="submit" role="button">QR</button>
+                </a>
+            </div>
 
             <div class="stand-button">
                 <a href="standlist">
                     <button class="button" role="button">Stand</button>
                 </a>
             </div>
-    </div>
-</body>
+        </div>
+    </body>
 </html>

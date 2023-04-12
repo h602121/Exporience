@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="css/StandList.css">
 </head>
 
-<body>
-<div class="header">
-  <h1>EXPORIENCE</h1>
-</div>
-<h3>List of Stands</h3>
+  <body>
+
+    <a href="home"><h1>EXPORIENCE</h1></a>
+
+
+    <h3>List of Stands</h3>
 
 
 <div>

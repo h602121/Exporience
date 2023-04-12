@@ -13,9 +13,10 @@
 
     <body>
 
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
 
         <p>Exhibitor Login </p>
 
@@ -25,10 +26,12 @@
 
 
                     <label class="label" for="username">Username:</label><br></br>
-                    <input class="input" type="text" id="username" name="username" placeholder="email@hotmail.com"><br></br>
+                    <input class="input" type="text" id="username" name="username"
+                           placeholder="email@hotmail.com"><br></br>
 
-                    <label class="label"for="input-field">Password:</label><br></br>
-                    <input id="input-field" class="input" type="password" id="password" name="password" placeholder="Password"><br></br>
+                    <label class="label" for="input-field">Password:</label><br></br>
+                    <input id="input-field" class="input" type="password" id="password" name="password"
+                           placeholder="Password"><br></br>
 
                     <div class="button-container">
                         <button class="button" type="submit" value="Login">Login</button>
@@ -39,7 +42,6 @@
 
                     <br></br>
                 </div>
-
 
 
             </div>
