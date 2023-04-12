@@ -16,6 +16,7 @@ h1 {
     font-style: normal;
     font-size: 4em;
 }
+
 a:has(h1){
     text-decoration: none;
 }
