@@ -20,29 +20,27 @@
 
 <div>
 
-  <c:forEach var="vote" items="${votes}">
+  <c:forEach var="score" items="${scores}">
     <div class="stand">
       <div class="stand_header">
         <div class="stand_header_text">
-          <h2>${vote.stands.name}</h2>
+          <h2>${score.stand.name}</h2>
         </div>
       </div>
 
-      <p>${vote.stands.stand_description}</p>
+      <p>${score.stand.stand_description}</p>
 
 
-      <p>Poster</p>
-      <div class="radio_buttons">
-        <p>${vote.votes.posterRating}</p>
-      </div>
-      <p>Content</p>
-      <div class="radio_buttons">
-        <p>${vote.votes.contentRating}</p>
-      </div>
-      <p>Presentation</p>
-      <div class="radio_buttons">
-        <p>${vote.votes.presentationRating}</p>
-      </div>
+      <p>Avg Poster</p>
+      <p>${score.posterAvg}</p>
+      <p>Avg Content</p>
+      <p>${score.contentAvg}</p>
+      <p>Avg Presentation</p>
+      <p>${score.presentationAvg}</p>
+
+      <p>Avg Total</p>
+      <p>${score.totalAvg}</p>
+
       <div class="spacer">
 
       </div>

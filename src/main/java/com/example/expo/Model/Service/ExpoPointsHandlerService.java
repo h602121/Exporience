@@ -68,8 +68,8 @@ public class ExpoPointsHandlerService {
         List<ExpoPointsHandler> allVotes = voteHandlerRepo.getAllByStandId(standId);
         return allVotes.stream().map(a -> a.getVoteId()).collect(Collectors.toList());
     }
-    public List<StandScoreAvg> getGet(){
-        List<ExpoPointsHandler> expoPointsHandler = voteHandlerRepo.getAll();
+    public List<StandScoreAvg> getAverageScoreAllStands(){
+        List<ExpoPointsHandler> expoPointsHandler = voteHandlerRepo.findAll();
 
 
         List<Stand> stands = standService.getAllStands();
@@ -87,20 +87,38 @@ public class ExpoPointsHandlerService {
             double avgPresentation = 0;
             double average = 0;
             for(Vote vote : allVotes){
-                average = vote.getContentRating();
-                average += vote.getPosterRating();
-                average += vote.getPresentationRating();
+                avgContent += vote.getContentRating();
+                avgPoster += vote.getPosterRating();
+                avgPresentation += vote.getPresentationRating();
+
+                average += avgContent;
+                average += avgPoster;
+                average += avgPresentation;
+
+                average /= 3;
             }
 
+            avgContent = avgContent/allVotes.size();
 
+            avgPresentation = avgPresentation/ allVotes.size();
 
+            avgPoster = avgPoster/ allVotes.size();
 
-            List<Vote> votes = voteService.getAllVotes();
+            average = average/allVotes.size();
 
+            avgPresentation = Math.floor(avgPresentation * 100) / 100;
+
+            avgContent = Math.floor(avgContent * 100) / 100;
+
+            avgPoster = Math.floor(avgPoster * 100) / 100;
+
+            average = Math.floor(average * 100) / 100;
+
+            standScoreAvgList.add(new StandScoreAvg(stand,avgPoster,avgPresentation,avgContent,average));
 
         }
 
-       return null;
+       return standScoreAvgList;
     }
 
 
