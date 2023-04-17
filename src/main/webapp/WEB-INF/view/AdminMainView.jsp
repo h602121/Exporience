@@ -38,7 +38,7 @@
 
             <div class="myvotes-button">
                 <a href="standratings">
-                    <button class="button" role="button">View Stand Ratings</button>
+                    <button class="button" role="button">Stand Ratings</button>
                 </a>
             </div>
 

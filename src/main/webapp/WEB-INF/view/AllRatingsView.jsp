@@ -6,6 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <title>List of Stands</title>
+  <link rel="stylesheet" href="css/Standard.css">
   <link rel="stylesheet" href="css/StandList.css">
 </head>
 
