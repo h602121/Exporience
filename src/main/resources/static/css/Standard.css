@@ -1,20 +1,24 @@
 
-
 .header {
     margin: auto;
     width: 100%;
-    border: 3px solid black;
-    background: black;
+    background: white;
+    padding-top: 1em;
     /*padding: 20px;*/
 }
 
 h1 {
+
     margin: auto;
-    color: #FFFFFF;
+    color: black;
     text-align: center;
     font-family: sans-serif;
     font-style: normal;
     font-size: 4em;
+}
+
+a:has(h1){
+    text-decoration: none;
 }
 
 body {
@@ -22,7 +26,9 @@ body {
     margin: 0;
     width: auto;
     height: auto;
-    background-image: url("https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1060&t=st=1678871621~exp=1678872221~hmac=14af8c9bcd06c2eaed906c2f9f07852396ec38a7ba77efcfe8c27c3b10aa7761");
+    /*background-image: url("https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=1060&t=st=1678871621~exp=1678872221~hmac=14af8c9bcd06c2eaed906c2f9f07852396ec38a7ba77efcfe8c27c3b10aa7761");*/
+    /*background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=996&t=st=1681288038~exp=1681288638~hmac=b934043df19c3cc9b3b6e14cc88ba4df21a5be3fb766765bb71bd10975dc31fe");*/
+    background-image: url("https://img.freepik.com/free-photo/stylish-soft-blue-curve-lines-abstract-background_1017-19950.jpg?w=1380&t=st=1681288187~exp=1681288787~hmac=19169cf03a7bfb3a22179aef2f42521b3294481af64ac8350f8466b43520c065");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

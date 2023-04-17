@@ -6,13 +6,16 @@
     <head>
         <meta charset="UTF-8">
         <title>List of Stands</title>
+        <link rel="stylesheet" href="css/Standard.css">
         <link rel="stylesheet" href="css/StandList.css">
+
+
+
     </head>
 
     <body>
-        <div class="header">
             <h1>EXPORIENCE</h1>
-        </div>
+
         <h3>List of Stands</h3>
 
         <c:if test="${error_rating_message != null}">
@@ -32,22 +35,24 @@
             <div class="stand">
                 <div class="stand_header">
                 <div class="stand_header_text">
+
                     <h2>${stand.name}
 
-                        <button class="read-more-info-icon modal-right">i<span class="hidden-info">
+                        <button class="info-btnn">i</button>
+                        <div class="info-content">
+                            <p>Poster: <br></br>Evaluate visual design, messaging,
+                                and impact based on clarity, creativity, and relevance. <br></br>
 
-                            Poster: <br></br>Evaluate visual design, messaging,
-                            and impact based on clarity, creativity, and relevance. <br></br>
+                                Content: <br></br>Evaluate relevance, accuracy, organization, coherence,
+                                and quality based on research, clarity, usefulness, and credibility.<br></br>
 
-                            Content: <br></br>Evaluate relevance, accuracy, organization, coherence,
-                            and quality based on research, clarity, usefulness, and credibility.<br></br>
+                                Presentation: <br></br>Evaluate engagement, key message delivery,
+                                objectives achievement, organization, visuals, delivery, audience interaction, and impact.<br></br></p>
+                        </div>
 
-                            Presentation: <br></br>Evaluate engagement, key message delivery,
-                            objectives achievement, organization, visuals, delivery, audience interaction, and impact.<br></br>
 
-                        </span></button>
 
-                    </h2>
+                    </h2> 
                 </div>
             </div>
 
@@ -61,8 +66,8 @@
                 <div class="radio_buttons">
                     <input type="radio" id="poster_one" name="poster_presentation" value="1">
                     <label for="poster_one">1</label>
-                    <input type="radio" id="poster_two" name="poster_presentation" value="2">
-                    <label for="poster_two">2</label>
+                    <input type="radio" id=${stand.qrCode} name="poster_presentation" value="2">
+                    <label for=${stand.qrCode}>2</label>
                     <input type="radio" id="poster_three" name="poster_presentation" value="3">
                     <label for="poster_three">3</label>
                     <input type="radio" id="poster_four" name="poster_presentation" value="4">
@@ -108,5 +113,17 @@
         </div>
 
     </body>
+
+    <script>
+        var infoBtn = document.querySelectorAll('.info-btnn');
+        var infoContent = document.querySelectorAll('.info-content');
+
+        infoBtn.forEach(function (btn,i){
+            btn.addEventListener('click', function() {
+                infoContent[i].classList.toggle('show');
+            });
+        })
+
+    </script>
 
 </html>

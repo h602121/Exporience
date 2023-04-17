@@ -26,7 +26,6 @@ public class LoginUtil {
 
     public static boolean erBrukerInnlogget(HttpSession session) {
 
-        System.out.println(session.getAttribute("username"));
         return session != null
                 && session.getAttribute("username") != null;
 

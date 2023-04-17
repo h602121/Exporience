@@ -13,9 +13,10 @@
 
     <body>
 
-        <div class="header">
-            <h1>EXPORIENCE</h1>
-        </div>
+
+        <a href="home"><h1>EXPORIENCE</h1></a>
+
+
 
         <p>Create Exhbititor</p>
 
@@ -28,23 +29,23 @@
             <div class="container">
                 <div>
 
-                    <label class="label" >FirstName</label>
-                    <input   class="input" placeholder="FirstName"  name="firstName"  type="text"/>
+                    <label class="label">FirstName</label>
+                    <input class="input" placeholder="FirstName" name="firstName" type="text"/>
 
-                    <label class="label" >LastName</label>
-                    <input   class="input" placeholder="LastName"  name="lastName"  type="text"/>
+                    <label class="label">LastName</label>
+                    <input class="input" placeholder="LastName" name="lastName" type="text"/>
 
                     <label class="label">Phonenumber</label>
-                    <input  class="input" placeholder="phonenumber"  name="phonenumber"  type="text"/>
+                    <input class="input" placeholder="phonenumber" name="phonenumber" type="text"/>
 
-                    <label class="label" >Email</label>
-                    <input   class="input"placeholder="Email"  name="email"  type="text"/>
+                    <label class="label">Email</label>
+                    <input class="input" placeholder="Email" name="email" type="text"/>
 
-                    <label class="label" >Password</label>
-                    <input  class="input" placeholder="Password"  name="password"  type="password"/>
+                    <label class="label">Password</label>
+                    <input class="input" placeholder="Password" name="password" type="password"/>
 
-                    <label class="label" >Confirm Password</label>
-                    <input  class="input" placeholder="Confirm Password"  name="confirmPassword"  type="password"/>
+                    <label class="label">Confirm Password</label>
+                    <input class="input" placeholder="Confirm Password" name="confirmPassword" type="password"/>
 
 
                     <button class="button" type="submit" value="Register">Register</button>
