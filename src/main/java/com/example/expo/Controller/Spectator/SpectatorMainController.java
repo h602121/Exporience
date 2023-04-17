@@ -17,8 +17,6 @@ public class SpectatorMainController {
 
         if(!LoginUtil.erBrukerInnlogget(session)) return "redirect:spectatorlogin";
 
-      //  if(!LoginUtil.korrektRolle(session, (Integer) session.getAttribute("role"))) return "/";
-
         return "SpectatorMainView";
     }
     @PostMapping

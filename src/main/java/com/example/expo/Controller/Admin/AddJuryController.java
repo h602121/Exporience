@@ -2,6 +2,7 @@ package com.example.expo.Controller.Admin;
 
 import com.example.expo.Model.Role;
 import com.example.expo.Model.Service.UserService;
+import com.example.expo.util.LoginUtil;
 import com.example.expo.util.PassordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 @Controller
 @RequestMapping("/createjury")
@@ -36,16 +38,22 @@ public class AddJuryController {
     private UserService userService;
 
     @GetMapping
-    public String getCreateJury() {
+    public String getCreateJury(HttpSession session) {
+
+        if (!LoginUtil.erBrukerInnlogget(session)) {
+            return "redirect:adminlogin";
+        }
 
         return "CreateJuryView";
     }
 
     @PostMapping
     public String postCreateJury(@RequestParam String phonenumber, @RequestParam String firstName,
-                                      @RequestParam String lastName, @RequestParam
+                                 @RequestParam String lastName, @RequestParam
                                       String email, @RequestParam String password,
-                                      @RequestParam String confirmPassword, HttpServletRequest request, RedirectAttributes ra) {
+                                 @RequestParam String confirmPassword, RedirectAttributes ra) {
+
+
 
         if (!userService.gyldigFirstName(firstName)) {
             ra.addFlashAttribute("redirectMessage", UGYLDIG_FIRST_NAME);
