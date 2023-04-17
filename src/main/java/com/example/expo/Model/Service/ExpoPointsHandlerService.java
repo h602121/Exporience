@@ -4,6 +4,7 @@ import com.example.expo.Model.Entity.ExpoPointsHandler;
 import com.example.expo.Model.Entity.Stand;
 import com.example.expo.Model.Entity.Vote;
 import com.example.expo.Model.Repo.ExpoPointHandlerRepo;
+import com.example.expo.StandScoreAvg;
 import com.example.expo.VoteListByUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -67,5 +68,42 @@ public class ExpoPointsHandlerService {
         List<ExpoPointsHandler> allVotes = voteHandlerRepo.getAllByStandId(standId);
         return allVotes.stream().map(a -> a.getVoteId()).collect(Collectors.toList());
     }
+    public List<StandScoreAvg> getGet(){
+        List<ExpoPointsHandler> expoPointsHandler = voteHandlerRepo.getAll();
+
+
+        List<Stand> stands = standService.getAllStands();
+
+        List<StandScoreAvg> standScoreAvgList = new ArrayList<StandScoreAvg>();
+
+        for (Stand stand: stands) {
+
+            int standId = stand.getQrCode();
+            List<Integer> votesId = getAllVotesByStandId(standId);
+            List<Vote> allVotes = voteService.getAllVotesById(votesId);
+
+            double avgPoster = 0;
+            double avgContent = 0;
+            double avgPresentation = 0;
+            double average = 0;
+            for(Vote vote : allVotes){
+                average = vote.getContentRating();
+                average += vote.getPosterRating();
+                average += vote.getPresentationRating();
+            }
+
+
+
+
+            List<Vote> votes = voteService.getAllVotes();
+
+
+        }
+
+       return null;
+    }
+
+
+
 
 }
