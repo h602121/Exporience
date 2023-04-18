@@ -6,7 +6,6 @@ import com.example.expo.Model.Service.ExhibitorStandService;
 import com.example.expo.Model.Service.StandService;
 import com.example.expo.Model.Service.UserService;
 import com.example.expo.util.LoginUtil;
-import com.example.expo.util.UserUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
