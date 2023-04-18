@@ -57,6 +57,8 @@ public class ViewStandController {
 
         average = average/votes.size();
 
+       average = Math.floor(average * 100) / 100;
+
         model.addAttribute("avg_rating", average);
 
         model.addAttribute("stand", standService.getStandbyStandId(standId));
