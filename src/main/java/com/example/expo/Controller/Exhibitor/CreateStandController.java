@@ -28,10 +28,13 @@ public class CreateStandController {
     private ExhibitorStandService expoStandService;
 
     @GetMapping
-    public String getCreateStand(HttpSession session){
+    public String getCreateStand(HttpSession session, HttpServletRequest req){
 
         if (!LoginUtil.erBrukerInnlogget(session)) {
             return "redirect:exhibitorlogin";
+        }
+        if(req.getSession().getAttribute("stand") != null){
+            return "redirect:viewstand";
         }
 
         return "CreateStandView";
@@ -44,6 +47,8 @@ public class CreateStandController {
         Integer userId = userService.findByMail((String)req.getSession().getAttribute("username")).getId();
         Integer standId = standService.addStand(name, stand_description);
         expoStandService.addExhbitorStand(userId, standId);
+
+        req.getSession().setAttribute("stand", standId);
 
 
         return "redirect:/viewstand";

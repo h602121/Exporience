@@ -71,8 +71,6 @@ public class ExpoPointsHandlerService {
         return allVotes.stream().map(a -> a.getVoteId()).collect(Collectors.toList());
     }
     public List<StandScoreAvg> getAverageScoreAllStands(){
-        List<ExpoPointsHandler> expoPointsHandler = voteHandlerRepo.findAll();
-
 
         List<Stand> stands = standService.getAllStands();
 
@@ -88,6 +86,7 @@ public class ExpoPointsHandlerService {
             double avgContent = 0;
             double avgPresentation = 0;
             double average = 0;
+
             for(Vote vote : allVotes){
                 avgContent += vote.getContentRating();
                 avgPoster += vote.getPosterRating();
@@ -116,9 +115,8 @@ public class ExpoPointsHandlerService {
 
             average = Math.floor(average * 100) / 100;
 
+
             standScoreAvgList.add(new StandScoreAvg(stand,avgPoster,avgPresentation,avgContent,average));
-
-
 
         }
 
@@ -129,15 +127,19 @@ public class ExpoPointsHandlerService {
 
     private List<StandScoreAvg> sortStandScoreAvgList(List<StandScoreAvg> standScoreAvgList){
 
-        standScoreAvgList.sort(Comparator.comparing(StandScoreAvg::getTotalAvg).reversed());
-
-        for (int i = 0; i <standScoreAvgList.size() ; i++) {
-            if(Double.isFinite(standScoreAvgList.get(i).getTotalAvg())){
+        for (StandScoreAvg standscoreavg: standScoreAvgList) {
+            if(Double.isFinite(standscoreavg.getTotalAvg())){
 
             } else{
-                standScoreAvgList.remove(i);
+                standscoreavg.setContentAvg(0.0);
+                standscoreavg.setPosterAvg(0.0);
+                standscoreavg.setPresentationAvg(0.0);
+                standscoreavg.setTotalAvg(0.0);
             }
         }
+
+
+        standScoreAvgList.sort(Comparator.comparing(StandScoreAvg::getTotalAvg).reversed());
         return standScoreAvgList;
     }
 
