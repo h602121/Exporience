@@ -16,40 +16,37 @@
 
     <body>
 
-
         <a href="home"><h1>EXPORIENCE</h1></a>
 
-
-
         <div class="buttons">
-
             <div class="winner-button">
                 <a href="createjury">
                     <button class="button" type="submit" role="button">Add Jury</button>
                 </a>
             </div>
 
-
-            <div class="ratingselector-button">
-                <a href="events">
-                    <button class="button" role="button">Events</button>
-                </a>
-            </div>
-
             <div class="myvotes-button">
-                <a href="standratings">
-                    <button class="button" role="button">Stand Ratings</button>
+                <a href="viewratings">
+                    <button class="button" role="button">View Stand Ratings</button>
                 </a>
             </div>
 
-    <div class="signout-button">
-        <a href="/">
-            <button class="button" role="button">Sign out</button>
-        </a>
-    </div>
+            <div class="declarewinner-button">
+                <a href="declarewinner">
+                    <button class="button" role="button">Declare Winner</button>
+                </a>
+            </div>
+            <div class="seewinners-button">
+                <a href="seewinner">
+                    <button class="button" role="button">See Winners</button>
+                </a>
+            </div>
 
+            <div class="signout-button">
+                <a href="${pageContext.request.contextPath}/signout">
+                    <button class="button" role="button">Sign out</button>
+                </a>
+            </div>
         </div>
     </body>
-
-
 </html>

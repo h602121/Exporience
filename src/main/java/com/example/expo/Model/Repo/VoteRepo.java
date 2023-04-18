@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface VoteRepo extends JpaRepository<Vote, Integer> {
 
-    Vote getVoteById(int id);
+     Vote getVoteById(int id);
 
-    List<Vote> findAll();
+     List<Vote> findAll();
 
-    List<Vote> findAllByIdIn(List<Integer> votesId);
+     List<Vote> findAllByIdIn(List<Integer> votesId);
 
 
 }

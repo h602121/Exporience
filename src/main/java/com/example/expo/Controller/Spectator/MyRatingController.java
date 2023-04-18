@@ -1,9 +1,13 @@
 package com.example.expo.Controller.Spectator;
 
+import com.example.expo.Model.Entity.Stand;
 import com.example.expo.Model.Entity.User;
+import com.example.expo.Model.Entity.UserVotes;
+import com.example.expo.Model.Entity.Vote;
 import com.example.expo.Model.Service.ExpoPointsHandlerService;
 import com.example.expo.Model.Service.UserService;
-import com.example.expo.Model.Entity.VoteListByUser;
+import com.example.expo.Model.Service.UserVotesService;
+import com.example.expo.VoteListByUser;
 import com.example.expo.util.LoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +29,27 @@ public class MyRatingController {
     @Autowired
     public UserService userService;
 
+    @Autowired
+    public UserVotesService userVotesService;
+
     @GetMapping
+    public String getMyRating(Model model, HttpSession session) {
+        if (!LoginUtil.erBrukerInnlogget(session)) {
+            return "redirect:spectatorlogin";
+        }
+        User username = userService.findByMail((String) session.getAttribute("username"));
+        List<UserVotes> voteListByUser = userVotesService.getUserVotesByUserId(username.getId());
+        model.addAttribute("votes", voteListByUser);
+        return "MyRatingView";
+    }
+    
+
+    @PostMapping
+    public String postMyRating() {
+        return "redirect:myratings";
+    }
+
+    /* @GetMapping
     public String getMyRating(Model model, HttpSession session) {
         if (!LoginUtil.erBrukerInnlogget(session)) {
             return "redirect:spectatorlogin";
@@ -39,5 +63,6 @@ public class MyRatingController {
     @PostMapping
     public String postMyRating() {
         return "redirect:myratings";
-    }
+    } */
+
 }

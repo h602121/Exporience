@@ -11,7 +11,7 @@ public class ExpoService {
     @Autowired
     public ExpoRepo expoRepo;
 
-    public Expo findExpoByName(String name) {
+    public Expo findExpoByName(String name){
         return expoRepo.findByExpoName(name);
     }
 }

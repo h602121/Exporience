@@ -16,14 +16,14 @@
         <div class="buttons">
 
             <div class="winner-button">
-                <a href="winner">
+                <a href="seewinner">
                     <button class="button" type="submit" role="button">See Winner</button>
                 </a>
             </div>
 
 
             <div class="ratingselector-button">
-                <a href="ratingselector">
+                <a href="standlist">
                     <button class="button" role="button">Give Rating</button>
                 </a>
             </div>
@@ -34,11 +34,12 @@
                 </a>
             </div>
 
-    <div class="signout-button">
-        <a href="/">
-            <button class="button" role="button">Sign out</button>
-        </a>
-    </div>
+            <div class="signout-button">
+                <a href="${pageContext.request.contextPath}/signout">
+                    <button class="button" role="button">Sign out</button>
+                </a>
+            </div>
+            
 
         </div>
     </body>

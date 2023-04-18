@@ -17,9 +17,16 @@
         <div class="buttons">
 
             <div class="winner-button">
-                <a href="winner">
+                <a href="seewinner">
                     <button class="button" type="submit" role="button">See Winner</button>
                 </a>
+            </div>
+
+
+            <div class="ratingselector-button">
+                <a href="viewratings">
+                <button class="button" role="button">View Rating</button>
+            </a>
             </div>
 
             <div class="myvotes-button">
@@ -29,7 +36,7 @@
             </div>
 
             <div class="signout-button">
-                <a href="exhibitorlogin">
+                <a href="${pageContext.request.contextPath}/signout">
                     <button class="button" role="button">Sign out</button>
                 </a>
             </div>

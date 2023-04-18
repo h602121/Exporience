@@ -27,17 +27,17 @@ public class PassordUtil {
 
     /**
      * Genererer en kryptografisk hash for gitt passord og salt.
-     * <p>
+     *
      * Algoritmen som brukes er PBKDF2WithHmacSHA1
-     * - PBKDF2: Password-Based-Key-Derivation-Function
-     * - WithHmac: HMAC står for Keyed-Hash Message Authentication Code
-     * - SHA1: SHA1 hashing-algoritme
-     * <p>
+     * 	- PBKDF2: Password-Based-Key-Derivation-Function
+     *  - WithHmac: HMAC står for Keyed-Hash Message Authentication Code
+     *  - SHA1: SHA1 hashing-algoritme
+     *
      * Det itereres 1000 ganger.
      * Output fra denne algoritmen er 256 bits, dvs. 32 bytes.
-     * <p>
+     *
      * Se https://en.wikipedia.org/wiki/PBKDF2 for mer info om virkemåte.
-     * <p>
+     *
      * Til slutt omgjøres byte-tabellen til en HEX-streng på 64 tegn/siffer.
      *
      * @param passord
@@ -69,8 +69,8 @@ public class PassordUtil {
      * Sjekker om et passord matcher en hash generert med korresponderende
      * hashMedSalt().
      *
-     * @param passord     - Passord som skal sjekkes
-     * @param salt        - Saltet som ble brukt ved generering av passordhash
+     * @param passord - Passord som skal sjekkes
+     * @param salt - Saltet som ble brukt ved generering av passordhash
      * @param passordhash - Det "lagrete" passordet
      * @return om passordet matcher
      */

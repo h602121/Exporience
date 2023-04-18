@@ -46,7 +46,7 @@ public class CreateExhibitorController {
     public String postCreateExhibitor(@RequestParam String phonenumber, @RequestParam String firstName,
                                       @RequestParam String lastName, @RequestParam
                                       String email, @RequestParam String password,
-                                      @RequestParam String confirmPassword, RedirectAttributes ra) {
+                                      @RequestParam String confirmPassword, HttpServletRequest request, RedirectAttributes ra) {
 
         if (!userService.gyldigFirstName(firstName)) {
             ra.addFlashAttribute("redirectMessage", UGYLDIG_FIRST_NAME);

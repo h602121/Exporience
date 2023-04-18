@@ -10,11 +10,10 @@
 
         <a href="home"><h1>EXPORIENCE</h1></a>
 
-
-
         <div class="welcome_text">
             <p>Welcome to Exporience, who are you?</p>
         </div>
+
         <div class="buttons">
 
             <div class="spectator-button">
@@ -22,7 +21,6 @@
                     <button class="button" type="submit" role="button">Spectator</button>
                 </a>
             </div>
-
 
             <div class="exhibitor-button">
                 <a href="exhibitorlogin">
@@ -36,7 +34,18 @@
                 </a>
             </div>
 
+            <div class="admin-button">
+                <a href="adminlogin">
+                    <button class="button" role="button">Admin</button>
+                </a>
+            </div>
+
         </div>
+
+    </body>
+
+</html>
+
 <%--        <div class="main_info">--%>
 <%--            <p class="main_info_paragraph">Welcome to our exciting new website! Here, you'll find the ultimate platform--%>
 <%--                for rating and reviewing exhibition stands. Whether you're a seasoned expo-goer or a first-time visitor,--%>
