@@ -77,7 +77,7 @@ public class CreateSpectatorController {
         String passordMedSalt=PassordUtil.hashMedSalt(password, salt);
 
         userService.createSpectator(phonenumber, firstName, lastName, email, passordMedSalt, Role.SPECTATOR.getRoleID(), salt);
-        return "redirect:/spectatormain";
+        return "redirect:/spectatorlogin";
 
     }
 }
