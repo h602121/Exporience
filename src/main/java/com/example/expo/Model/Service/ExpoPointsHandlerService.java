@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -116,9 +118,27 @@ public class ExpoPointsHandlerService {
 
             standScoreAvgList.add(new StandScoreAvg(stand,avgPoster,avgPresentation,avgContent,average));
 
+
+
         }
 
-       return standScoreAvgList;
+            sortStandScoreAvgList(standScoreAvgList);
+
+        return standScoreAvgList;
+    }
+
+    private List<StandScoreAvg> sortStandScoreAvgList(List<StandScoreAvg> standScoreAvgList){
+
+        standScoreAvgList.sort(Comparator.comparing(StandScoreAvg::getTotalAvg).reversed());
+
+        for (int i = 0; i <standScoreAvgList.size() ; i++) {
+            if(Double.isFinite(standScoreAvgList.get(i).getTotalAvg())){
+
+            } else{
+                standScoreAvgList.remove(i);
+            }
+        }
+        return standScoreAvgList;
     }
 
 
