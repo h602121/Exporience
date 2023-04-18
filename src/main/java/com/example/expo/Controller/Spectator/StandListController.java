@@ -43,34 +43,34 @@ public class StandListController {
     public StandService standService;
 
     @GetMapping
-    public String getStandList(Model model, HttpSession session){
+    public String getStandList(Model model, HttpSession session) {
 
-        if(!LoginUtil.erBrukerInnlogget(session)) return "redirect:/spectatorlogin";
+        if (!LoginUtil.erBrukerInnlogget(session)) return "redirect:/spectatorlogin";
         List<Stand> stands = standService.getAllStands();
         model.addAttribute("stands", stands);
         return "StandListView";
     }
 
     @PostMapping
-    public String postStandList(@RequestParam HashMap<String, String> map, @RequestParam Integer stand_id, HttpServletRequest req, RedirectAttributes ra){
+    public String postStandList(@RequestParam HashMap<String, String> map, @RequestParam Integer stand_id, HttpServletRequest req, RedirectAttributes ra) {
 
-       Map<String,Integer> newMap =  GeneralFormatUtil.validNumberFormat(map);
+        Map<String, Integer> newMap = GeneralFormatUtil.validNumberFormat(map);
 
-       if(newMap.get("poster_presentation") == null || newMap.get("content_presentation") == null ||newMap.get("rating_presentation") == null){
-           ra.addFlashAttribute("error_rating_message", "Invalid vote, all values on one stand must be selected");
-           return "redirect:/standlist";
-       }
-
-            HttpSession session = req.getSession();
-        User username = userService.findByMail((String)session.getAttribute("username"));
-        if(!pointsHandlerService.checkIfUseridAndStandIdHasAlreadyVoted(username.getId(),stand_id)){
-            ra.addFlashAttribute("error_rating_message","You have already voted on this stand. Cant vote more than once per stand");
+        if (newMap.get("poster_presentation") == null || newMap.get("content_presentation") == null || newMap.get("rating_presentation") == null) {
+            ra.addFlashAttribute("error_rating_message", "Invalid vote, all values on one stand must be selected");
             return "redirect:/standlist";
         }
 
-        int voteId = voteService.addVote(newMap.get("poster_presentation"),newMap.get("content_presentation"),newMap.get("rating_presentation"));
-        pointsHandlerService.addVoteHandler(voteId,username.getId(),stand_id,(Integer)session.getAttribute("expo"));
-        ra.addFlashAttribute("confirmation_rating_message","Voted on stand");
+        HttpSession session = req.getSession();
+        User username = userService.findByMail((String) session.getAttribute("username"));
+        if (!pointsHandlerService.checkIfUseridAndStandIdHasAlreadyVoted(username.getId(), stand_id)) {
+            ra.addFlashAttribute("error_rating_message", "You have already voted on this stand. Cant vote more than once per stand");
+            return "redirect:/standlist";
+        }
+
+        int voteId = voteService.addVote(newMap.get("poster_presentation"), newMap.get("content_presentation"), newMap.get("rating_presentation"));
+        pointsHandlerService.addVoteHandler(voteId, username.getId(), stand_id, (Integer) session.getAttribute("expo"));
+        ra.addFlashAttribute("confirmation_rating_message", "Voted on stand");
 
         return "redirect:/standlist";
     }

@@ -11,11 +11,12 @@ public class ExhibitorStandService {
     @Autowired
     public ExhibitorStandRepo exhibitorStandRepo;
 
-    public Integer findStandByUserId(Integer userId){
+    public Integer findStandByUserId(Integer userId) {
         return exhibitorStandRepo.findByExhibitorId(userId).getStandId();
     }
-    public boolean addExhbitorStand( Integer exhibitorId,Integer standId){
-        exhibitorStandRepo.save(new ExhibitorStand(exhibitorId,standId));
+
+    public boolean addExhbitorStand(Integer exhibitorId, Integer standId) {
+        exhibitorStandRepo.save(new ExhibitorStand(exhibitorId, standId));
         return true;
     }
 }

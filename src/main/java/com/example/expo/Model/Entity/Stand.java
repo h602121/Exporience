@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "stand",schema = "exporiencedb")
+@Table(name = "stand", schema = "exporiencedb")
 public class Stand {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -16,7 +16,7 @@ public class Stand {
     private String name;
 
     @Basic
-    @Column(name="stand_description")
+    @Column(name = "stand_description")
     private String stand_description;
 
     public Stand() {

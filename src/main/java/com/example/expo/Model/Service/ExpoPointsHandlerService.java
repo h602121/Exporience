@@ -4,13 +4,12 @@ import com.example.expo.Model.Entity.ExpoPointsHandler;
 import com.example.expo.Model.Entity.Stand;
 import com.example.expo.Model.Entity.Vote;
 import com.example.expo.Model.Repo.ExpoPointHandlerRepo;
-import com.example.expo.StandScoreAvg;
-import com.example.expo.VoteListByUser;
+import com.example.expo.Model.Entity.StandScoreAvg;
+import com.example.expo.Model.Entity.VoteListByUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -70,13 +69,14 @@ public class ExpoPointsHandlerService {
         List<ExpoPointsHandler> allVotes = voteHandlerRepo.getAllByStandId(standId);
         return allVotes.stream().map(a -> a.getVoteId()).collect(Collectors.toList());
     }
-    public List<StandScoreAvg> getAverageScoreAllStands(){
+
+    public List<StandScoreAvg> getAverageScoreAllStands() {
 
         List<Stand> stands = standService.getAllStands();
 
         List<StandScoreAvg> standScoreAvgList = new ArrayList<StandScoreAvg>();
 
-        for (Stand stand: stands) {
+        for (Stand stand : stands) {
 
             int standId = stand.getQrCode();
             List<Integer> votesId = getAllVotesByStandId(standId);
@@ -87,7 +87,7 @@ public class ExpoPointsHandlerService {
             double avgPresentation = 0;
             double average = 0;
 
-            for(Vote vote : allVotes){
+            for (Vote vote : allVotes) {
                 avgContent += vote.getContentRating();
                 avgPoster += vote.getPosterRating();
                 avgPresentation += vote.getPresentationRating();
@@ -99,13 +99,13 @@ public class ExpoPointsHandlerService {
                 average /= 3;
             }
 
-            avgContent = avgContent/allVotes.size();
+            avgContent = avgContent / allVotes.size();
 
-            avgPresentation = avgPresentation/ allVotes.size();
+            avgPresentation = avgPresentation / allVotes.size();
 
-            avgPoster = avgPoster/ allVotes.size();
+            avgPoster = avgPoster / allVotes.size();
 
-            average = average/allVotes.size();
+            average = average / allVotes.size();
 
             avgPresentation = Math.floor(avgPresentation * 100) / 100;
 
@@ -116,21 +116,21 @@ public class ExpoPointsHandlerService {
             average = Math.floor(average * 100) / 100;
 
 
-            standScoreAvgList.add(new StandScoreAvg(stand,avgPoster,avgPresentation,avgContent,average));
+            standScoreAvgList.add(new StandScoreAvg(stand, avgPoster, avgPresentation, avgContent, average));
 
         }
 
-            sortStandScoreAvgList(standScoreAvgList);
+        sortStandScoreAvgList(standScoreAvgList);
 
         return standScoreAvgList;
     }
 
-    private List<StandScoreAvg> sortStandScoreAvgList(List<StandScoreAvg> standScoreAvgList){
+    private List<StandScoreAvg> sortStandScoreAvgList(List<StandScoreAvg> standScoreAvgList) {
 
-        for (StandScoreAvg standscoreavg: standScoreAvgList) {
-            if(Double.isFinite(standscoreavg.getTotalAvg())){
+        for (StandScoreAvg standscoreavg : standScoreAvgList) {
+            if (Double.isFinite(standscoreavg.getTotalAvg())) {
 
-            } else{
+            } else {
                 standscoreavg.setContentAvg(0.0);
                 standscoreavg.setPosterAvg(0.0);
                 standscoreavg.setPresentationAvg(0.0);
@@ -142,8 +142,6 @@ public class ExpoPointsHandlerService {
         standScoreAvgList.sort(Comparator.comparing(StandScoreAvg::getTotalAvg).reversed());
         return standScoreAvgList;
     }
-
-
 
 
 }

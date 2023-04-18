@@ -7,7 +7,7 @@ import java.sql.Time;
 import java.util.Objects;
 
 @Entity
-@Table(name="expo", schema = "ExporienceDB")
+@Table(name = "expo", schema = "ExporienceDB")
 public class Expo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

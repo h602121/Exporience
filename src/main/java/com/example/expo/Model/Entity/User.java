@@ -2,12 +2,11 @@
 package com.example.expo.Model.Entity;
 
 
-
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name="user", schema = "ExporienceDB")
+@Table(name = "user", schema = "ExporienceDB")
 public class User {
     @Basic
     @Column(name = "phonenumber")
@@ -45,7 +44,7 @@ public class User {
         this.email = email;
         this.password = password;
         this.roleId = roleId;
-        this.salt=salt;
+        this.salt = salt;
     }
 
     public String getPhonenumber() {
@@ -103,10 +102,12 @@ public class User {
     public void setRoleId(Integer roleId) {
         this.roleId = roleId;
     }
-    public void setSalt(String salt){
-        this.salt=salt;
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
-    public String getSalt(){
+
+    public String getSalt() {
         return salt;
     }
 

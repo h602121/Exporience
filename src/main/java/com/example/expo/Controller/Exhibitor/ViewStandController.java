@@ -39,7 +39,7 @@ public class ViewStandController {
             return "redirect:exhibitorlogin";
         }
 
-        if(req.getSession().getAttribute("stand") == null){
+        if (req.getSession().getAttribute("stand") == null) {
             return "redirect:/createstand";
         }
         Integer userId = userService.findByMail((String)req.getSession().getAttribute("username")).getId();

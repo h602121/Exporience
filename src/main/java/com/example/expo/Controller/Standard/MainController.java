@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/home")
 public class MainController {
     @GetMapping
-    public String helloWorld(){
+    public String helloWorld() {
         return "MainView";
     }
 
     @PostMapping
-    public String postSpectatorLogin(){
+    public String postSpectatorLogin() {
         return "redirect:spectatorlogin";
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface StandRepo extends JpaRepository<Stand, String> {
 
-    List <Stand> findAll();
+    List<Stand> findAll();
 
     Stand getStandByQrCode(Integer id);
 

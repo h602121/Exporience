@@ -34,7 +34,7 @@ public class ExhibitorLoginController {
     }
 
     @PostMapping
-    public String postLogin(@RequestParam String username, @RequestParam String password, HttpServletRequest req, RedirectAttributes ra, HttpSession session) {
+    public String postLogin(@RequestParam String username, @RequestParam String password, HttpServletRequest req, RedirectAttributes ra) {
 
 
         if (!userService.findUserByEmail(username)) {
@@ -51,8 +51,8 @@ public class ExhibitorLoginController {
             Integer stand = null;
 
             try {
-               stand = exhibitorStandService.findStandByUserId(userService.findByMail(username).getId());
-            }catch (NullPointerException e){
+                stand = exhibitorStandService.findStandByUserId(userService.findByMail(username).getId());
+            } catch (NullPointerException e) {
                 stand = null;
             }
 

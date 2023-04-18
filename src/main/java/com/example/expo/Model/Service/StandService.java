@@ -13,22 +13,23 @@ public class StandService {
     @Autowired
     public StandRepo standRepo;
 
-    public List<Stand> getAllStands(){
+    public List<Stand> getAllStands() {
 
         return standRepo.findAll();
 
     }
-    public Integer addStand(String name, String description){
+
+    public Integer addStand(String name, String description) {
 
         Stand stand = standRepo.save(new Stand(name, description));
 
         return stand.getQrCode();
 
     }
-    public Stand getStandbyStandId(Integer standId){
+
+    public Stand getStandbyStandId(Integer standId) {
         return standRepo.getStandByQrCode(standId);
     }
-
 
 
 }

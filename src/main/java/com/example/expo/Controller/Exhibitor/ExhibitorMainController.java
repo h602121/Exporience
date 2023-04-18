@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping ("/exhibitormain")
+@RequestMapping("/exhibitormain")
 
 public class ExhibitorMainController {
     @GetMapping

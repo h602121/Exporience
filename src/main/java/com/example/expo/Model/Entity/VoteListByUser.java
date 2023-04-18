@@ -1,4 +1,4 @@
-package com.example.expo;
+package com.example.expo.Model.Entity;
 
 import com.example.expo.Model.Entity.Stand;
 import com.example.expo.Model.Entity.Vote;

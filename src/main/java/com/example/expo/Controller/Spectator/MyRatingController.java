@@ -1,11 +1,9 @@
 package com.example.expo.Controller.Spectator;
 
-import com.example.expo.Model.Entity.Stand;
 import com.example.expo.Model.Entity.User;
-import com.example.expo.Model.Entity.Vote;
 import com.example.expo.Model.Service.ExpoPointsHandlerService;
 import com.example.expo.Model.Service.UserService;
-import com.example.expo.VoteListByUser;
+import com.example.expo.Model.Entity.VoteListByUser;
 import com.example.expo.util.LoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
