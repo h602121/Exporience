@@ -22,11 +22,6 @@
                 </a>
             </div>
 
-
-            <div class="ratingselector-button">
-                <button class="button" role="button">View Rating</button>
-            </div>
-
             <div class="myvotes-button">
                 <a href="viewstand">
                     <button class="button" role="button">View Stand</button>
