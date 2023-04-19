@@ -92,12 +92,15 @@ public class ExpoPointsHandlerService {
                 avgPoster += vote.getPosterRating();
                 avgPresentation += vote.getPresentationRating();
 
-                average += avgContent;
-                average += avgPoster;
-                average += avgPresentation;
 
-                average /= 3;
+
+
             }
+            average += avgContent;
+            average += avgPoster;
+            average += avgPresentation;
+
+            average /= 3;
 
             avgContent = avgContent / allVotes.size();
 

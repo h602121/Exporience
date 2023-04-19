@@ -46,6 +46,7 @@ p{
 
 .stand {
 
+    padding: 8px;
     border-radius: 5px;
     margin: 20px auto;
     max-width: 600px;
